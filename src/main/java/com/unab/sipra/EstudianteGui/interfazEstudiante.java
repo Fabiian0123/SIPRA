@@ -3,15 +3,11 @@ package com.unab.sipra.EstudianteGui;
 
 public class interfazEstudiante extends javax.swing.JFrame {
 
-    /**
-     * Creates new form interfazEstudiante
-     */
+    
     public interfazEstudiante() {
-        
-        setVisible(true);
         initComponents();
-        
-        
+        this.setLocationRelativeTo(null);
+    
     }
 
     /**

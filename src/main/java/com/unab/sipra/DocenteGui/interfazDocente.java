@@ -35,6 +35,7 @@ public class interfazDocente extends javax.swing.JFrame {
         botonBuscarInterfazDocente = new javax.swing.JButton();
         botonEditarInformacionEstudianteInterfazDocente = new javax.swing.JButton();
         botonSubirEvidenciasInterfazDocente = new javax.swing.JButton();
+        botonMinimizarInterfazDocente = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -145,6 +146,15 @@ public class interfazDocente extends javax.swing.JFrame {
         botonSubirEvidenciasInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonSubirEvidenciasInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, 30));
 
+        botonMinimizarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (2).png")); // NOI18N
+        botonMinimizarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonMinimizarInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonMinimizarInterfazDocenteMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonMinimizarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfazDocenteSI.png")); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 0), 4));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 530));
@@ -167,6 +177,10 @@ public class interfazDocente extends javax.swing.JFrame {
     private void botonEditarInformacionEstudianteInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
         
     }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
+
+    private void botonMinimizarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfazDocenteMouseClicked
+       this.setState(interfazDocente.ICONIFIED);
+    }//GEN-LAST:event_botonMinimizarInterfazDocenteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -209,6 +223,7 @@ public class interfazDocente extends javax.swing.JFrame {
     private javax.swing.JButton botonCerrarSesionInterfazDocente;
     private javax.swing.JButton botonEditarInformacionEstudianteInterfazDocente;
     private javax.swing.JButton botonEliminarInterfazDocente;
+    private javax.swing.JLabel botonMinimizarInterfazDocente;
     private javax.swing.JButton botonSubirEvidenciasInterfazDocente;
     private javax.swing.JPanel cajaListaPracticantesInterfazDocenteGui;
     private javax.swing.JLabel jLabel1;

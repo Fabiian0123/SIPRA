@@ -1,20 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.unab.sipra.ExtensionGui;
 
-/**
- *
- * @author fabia
- */
+
 public class interfazExtension extends javax.swing.JFrame {
 
-    /**
-     * Creates new form interfazExtension
-     */
+    
     public interfazExtension() {
         initComponents();
+       
+       
     }
 
     /**
@@ -122,7 +116,7 @@ public class interfazExtension extends javax.swing.JFrame {
         });
         getContentPane().add(botonListaDocentesSeguimientoDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, 320, 50));
 
-        botonSalirInterfazExtension.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/cerrar-sesion.png"))); // NOI18N
+        botonSalirInterfazExtension.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
         botonSalirInterfazExtension.setContentAreaFilled(false);
         botonSalirInterfazExtension.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonSalirInterfazExtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 30, 40, 40));

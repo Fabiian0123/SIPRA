@@ -23,12 +23,14 @@ public class ControladorLoguinSipra {
         if(Usuario.equals("admin") && Contraseña.equals("admin")){
             
             if (checkEstudiante.isSelected()){
-            
+                hidden();
+                ControladorInterfazEstudiante.inicio();
             } else if (checkDocente.isSelected()) {
                 hidden();
                 ControladorInterfazDocente.inicio();
             } else if (checkExtension.isSelected()) { 
-            
+                hidden();
+                ControladorInterfazExtension.inicio();
             } else {
                 JOptionPane.showMessageDialog(ventanaUno,"POR FAVOR SELECCIONE UN ROL");
             }

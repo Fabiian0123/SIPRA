@@ -167,9 +167,8 @@ public final class LoguinSipra extends javax.swing.JFrame {
     }//GEN-LAST:event_cajaContraseñaLoguinSipraGuiActionPerformed
 
     private void cajaCheckEstudianteLoguinSipraGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCheckEstudianteLoguinSipraGuiActionPerformed
-        //AbstractButton abstractButton = (AbstractButton)evt.getSource();
         ControladorLoguinSipra.onCheckRoles(cajaCheckEstudianteLoguinSipraGui, cajaCheckDocenteLoguinSipraGui, cajaCheckExtensionLoguinSipraGui);
-        //cajaCheckEstudianteLoguinSipraGui.setSelected(abstractButton.getModel().isSelected());
+        
     }//GEN-LAST:event_cajaCheckEstudianteLoguinSipraGuiActionPerformed
 
     private void botonOlvidasteUsuarioContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOlvidasteUsuarioContraseñaMouseClicked
@@ -206,15 +205,13 @@ public final class LoguinSipra extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCerrarMouseClicked
 
     private void cajaCheckExtensionLoguinSipraGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCheckExtensionLoguinSipraGuiActionPerformed
-        //AbstractButton abstractButton = (AbstractButton)evt.getSource();
         ControladorLoguinSipra.onCheckRoles(cajaCheckEstudianteLoguinSipraGui, cajaCheckDocenteLoguinSipraGui, cajaCheckExtensionLoguinSipraGui);
-        //cajaCheckExtensionLoguinSipraGui.setSelected(abstractButton.getModel().isSelected());
+        
     }//GEN-LAST:event_cajaCheckExtensionLoguinSipraGuiActionPerformed
 
     private void cajaCheckDocenteLoguinSipraGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCheckDocenteLoguinSipraGuiActionPerformed
-        //AbstractButton abstractButton = (AbstractButton)evt.getSource();
-        ControladorLoguinSipra.onCheckRoles(cajaCheckEstudianteLoguinSipraGui, cajaCheckDocenteLoguinSipraGui, cajaCheckExtensionLoguinSipraGui);
-        //cajaCheckDocenteLoguinSipraGui.setSelected(abstractButton.getModel().isSelected());
+       ControladorLoguinSipra.onCheckRoles(cajaCheckEstudianteLoguinSipraGui, cajaCheckDocenteLoguinSipraGui, cajaCheckExtensionLoguinSipraGui);
+        
     }//GEN-LAST:event_cajaCheckDocenteLoguinSipraGuiActionPerformed
     
     /**
