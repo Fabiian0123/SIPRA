@@ -9,6 +9,9 @@ public class ControladorInterfazDocente {
     
     public static void inicio(){
         ventanaDos.setVisible(true);
-        
+    }
+    
+    public static void btn_editarInfo() {
+        ControladorEditarInforEstudianteInterfazDocente.inicio();
     }
 }

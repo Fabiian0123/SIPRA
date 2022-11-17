@@ -1,5 +1,6 @@
 package com.unab.sipra.DocenteGui;
 
+import com.unab.sipra.controladores.ControladorInterfazDocente;
 import java.awt.Frame;
 import javax.swing.JOptionPane;
 
@@ -152,7 +153,7 @@ public class interfazDocente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonEditarInformacionEstudianteInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
-        // TODO add your handling code here:
+        ControladorInterfazDocente.btn_editarInfo();
     }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
 
     private void botonCerrarSesionInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazDocenteMouseClicked

@@ -7,9 +7,10 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
 
    
     public editarInformacionEstudiante() {
-       
-        this.setLocationRelativeTo(null);
         initComponents();
+        this.setLocationRelativeTo(null);
+        setResizable(false);
+       
     }
 
     /**
@@ -35,12 +36,12 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaNombresEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombresEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombresEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombresEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombresEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 760, 30));
 
         cajaApellidosEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaApellidosEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaApellidosEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaApellidosEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         cajaApellidosEditarPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,26 +51,27 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         getContentPane().add(cajaApellidosEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 142, 760, 30));
 
         cajaNumieroIdEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaNumieroIdEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNumieroIdEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNumieroIdEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 192, 650, 30));
 
         cajaCorreoEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaCorreoEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaCorreoEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaCorreoEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaCorreoEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 780, 30));
 
         cajaProgramaEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaProgramaEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaProgramaEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaProgramaEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaProgramaEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 760, 30));
 
         cajaNombreEmpresaEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombreEmpresaEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombreEmpresaEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreEmpresaEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreEmpresaEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 342, 700, 30));
 
         cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 392, 660, 30));
 

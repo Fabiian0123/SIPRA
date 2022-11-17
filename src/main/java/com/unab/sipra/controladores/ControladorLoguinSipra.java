@@ -9,13 +9,18 @@ public class ControladorLoguinSipra {
     
     public static void inicio(){
         ventanaUno.setVisible(true);
-        
     }
+    
+    public static void hidden(){
+        ventanaUno.setVisible(false);
+    }
+    
     public static void btnEmpezar(){
         String Usuario, Contraseña;
         Usuario= ventanaUno.getCajaUsuarioLoguinSipraGui().getText();
         Contraseña=ventanaUno.getCajaContraseñaLoguinSipraGui().getText();
         if(Usuario.equals("admin") && Contraseña.equals("admin")){
+            hidden();
             ControladorInterfazDocente.inicio();
            
         }else{
