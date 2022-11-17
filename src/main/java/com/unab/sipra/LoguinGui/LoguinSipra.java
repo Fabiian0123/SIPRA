@@ -29,6 +29,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        grupoRoles = new javax.swing.ButtonGroup();
         cajaUsuarioLoguinSipraGui = new javax.swing.JTextField();
         cajaContraseñaLoguinSipraGui = new javax.swing.JPasswordField();
         cajaCheckEstudianteLoguinSipraGui = new javax.swing.JCheckBox();
@@ -67,6 +68,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
         });
         getContentPane().add(cajaContraseñaLoguinSipraGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 312, 280, 30));
 
+        grupoRoles.add(cajaCheckEstudianteLoguinSipraGui);
         cajaCheckEstudianteLoguinSipraGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         cajaCheckEstudianteLoguinSipraGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +77,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
         });
         getContentPane().add(cajaCheckEstudianteLoguinSipraGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 20, 20));
 
+        grupoRoles.add(cajaCheckDocenteLoguinSipraGui);
         cajaCheckDocenteLoguinSipraGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaCheckDocenteLoguinSipraGuiActionPerformed(evt);
@@ -82,6 +85,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
         });
         getContentPane().add(cajaCheckDocenteLoguinSipraGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
+        grupoRoles.add(cajaCheckExtensionLoguinSipraGui);
         cajaCheckExtensionLoguinSipraGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaCheckExtensionLoguinSipraGuiActionPerformed(evt);
@@ -276,6 +280,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
     private javax.swing.JCheckBox cajaCheckExtensionLoguinSipraGui;
     private javax.swing.JPasswordField cajaContraseñaLoguinSipraGui;
     private javax.swing.JTextField cajaUsuarioLoguinSipraGui;
+    private javax.swing.ButtonGroup grupoRoles;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel ocultarContra;
     private javax.swing.JLabel verContra;
