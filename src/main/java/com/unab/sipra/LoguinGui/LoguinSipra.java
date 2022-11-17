@@ -1,10 +1,13 @@
 package com.unab.sipra.LoguinGui;
 
 import com.unab.sipra.DocenteGui.interfazDocente;
+import com.unab.sipra.controladores.ControladorLoguinSipra;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,6 +22,7 @@ public final class LoguinSipra extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
+        this.ocultarContra.setVisible(false);
     }
 
    
@@ -35,13 +39,19 @@ public final class LoguinSipra extends javax.swing.JFrame {
         cajaCheckEstudianteLoguinSipraGui = new javax.swing.JCheckBox();
         cajaCheckDocenteLoguinSipraGui = new javax.swing.JCheckBox();
         cajaCheckExtensionLoguinSipraGui = new javax.swing.JCheckBox();
-        botonInicioSesionLoguinGui = new javax.swing.JButton();
+        btnEmpezar = new javax.swing.JButton();
         botonOlvidasteUsuarioContraseña = new javax.swing.JLabel();
+        verContra = new javax.swing.JLabel();
+        ocultarContra = new javax.swing.JLabel();
+        botonMinimizar = new javax.swing.JLabel();
+        botonCerrar = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loguin Sipra");
         setIconImage(getIconImage());
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaUsuarioLoguinSipraGui.setBackground(new java.awt.Color(255, 255, 255));
@@ -72,23 +82,18 @@ public final class LoguinSipra extends javax.swing.JFrame {
         getContentPane().add(cajaCheckDocenteLoguinSipraGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
         getContentPane().add(cajaCheckExtensionLoguinSipraGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
 
-        botonInicioSesionLoguinGui.setBackground(new java.awt.Color(204, 0, 0));
-        botonInicioSesionLoguinGui.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        botonInicioSesionLoguinGui.setForeground(new java.awt.Color(255, 255, 255));
-        botonInicioSesionLoguinGui.setText("EMPEZAR");
-        botonInicioSesionLoguinGui.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
-        botonInicioSesionLoguinGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonInicioSesionLoguinGui.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonInicioSesionLoguinGuiMouseClicked(evt);
-            }
-        });
-        botonInicioSesionLoguinGui.addActionListener(new java.awt.event.ActionListener() {
+        btnEmpezar.setBackground(new java.awt.Color(204, 0, 0));
+        btnEmpezar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        btnEmpezar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEmpezar.setText("EMPEZAR");
+        btnEmpezar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
+        btnEmpezar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEmpezar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInicioSesionLoguinGuiActionPerformed(evt);
+                btnEmpezarActionPerformed(evt);
             }
         });
-        getContentPane().add(botonInicioSesionLoguinGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 160, 40));
+        getContentPane().add(btnEmpezar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 160, 40));
 
         botonOlvidasteUsuarioContraseña.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         botonOlvidasteUsuarioContraseña.setForeground(new java.awt.Color(0, 0, 0));
@@ -101,6 +106,44 @@ public final class LoguinSipra extends javax.swing.JFrame {
         });
         getContentPane().add(botonOlvidasteUsuarioContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 180, -1));
 
+        verContra.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\ver.png")); // NOI18N
+        verContra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        verContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                verContraMouseClicked(evt);
+            }
+        });
+        getContentPane().add(verContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, 20));
+
+        ocultarContra.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\oculto.png")); // NOI18N
+        ocultarContra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ocultarContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ocultarContraMouseClicked(evt);
+            }
+        });
+        getContentPane().add(ocultarContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, -1));
+
+        botonMinimizar.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (1).png")); // NOI18N
+        botonMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonMinimizar.setMaximumSize(new java.awt.Dimension(35, 35));
+        botonMinimizar.setMinimumSize(new java.awt.Dimension(35, 35));
+        botonMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonMinimizarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 40, 40));
+
+        botonCerrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerca (1).png")); // NOI18N
+        botonCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 40, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\loginSipra00.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, -1));
@@ -109,34 +152,45 @@ public final class LoguinSipra extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cajaContraseñaLoguinSipraGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaContraseñaLoguinSipraGuiActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_cajaContraseñaLoguinSipraGuiActionPerformed
 
     private void cajaCheckEstudianteLoguinSipraGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCheckEstudianteLoguinSipraGuiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaCheckEstudianteLoguinSipraGuiActionPerformed
 
-    private void botonInicioSesionLoguinGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonInicioSesionLoguinGuiMouseClicked
-         String Usuario, Contraseña=null;
-        Usuario=cajaUsuarioLoguinSipraGui.getText();
-        Contraseña=cajaContraseñaLoguinSipraGui.getText();
-    if(Usuario.equals("admin") && Contraseña.equals("admin")){
-            interfazDocente docente = new interfazDocente();
-            docente.setVisible(true);
-            this.dispose();
-           
-        }else{
-            JOptionPane.showMessageDialog(null,"CONTRASEÑA O USUARIO INCORRECTA");
-        }
-    }//GEN-LAST:event_botonInicioSesionLoguinGuiMouseClicked
-
     private void botonOlvidasteUsuarioContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOlvidasteUsuarioContraseñaMouseClicked
         JOptionPane.showMessageDialog(null, "DIRIGETE AL DEPARTAMENTO DE SISTEMAS");
     }//GEN-LAST:event_botonOlvidasteUsuarioContraseñaMouseClicked
 
-    private void botonInicioSesionLoguinGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInicioSesionLoguinGuiActionPerformed
-       
-    }//GEN-LAST:event_botonInicioSesionLoguinGuiActionPerformed
+    private void btnEmpezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpezarActionPerformed
+       ControladorLoguinSipra.btnEmpezar();
+    }//GEN-LAST:event_btnEmpezarActionPerformed
+
+    private void verContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verContraMouseClicked
+        verContra.setVisible(false);
+        ocultarContra.setVisible(true);
+        cajaContraseñaLoguinSipraGui.setEchoChar((char)0);
+        
+    }//GEN-LAST:event_verContraMouseClicked
+
+    private void ocultarContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ocultarContraMouseClicked
+        verContra.setVisible(true);
+        ocultarContra.setVisible(false);
+        cajaContraseñaLoguinSipraGui.setEchoChar('●');
+    }//GEN-LAST:event_ocultarContraMouseClicked
+
+    private void botonMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarMouseClicked
+       this.setState(LoguinSipra.ICONIFIED);
+    }//GEN-LAST:event_botonMinimizarMouseClicked
+
+    private void botonCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarMouseClicked
+       int a = JOptionPane.YES_NO_OPTION;
+        int muestra = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",a);
+        if(muestra == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_botonCerrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -175,15 +229,35 @@ public final class LoguinSipra extends javax.swing.JFrame {
         });
     }
 
+    public JPasswordField getCajaContraseñaLoguinSipraGui() {
+        return cajaContraseñaLoguinSipraGui;
+    }
+
+    public void setCajaContraseñaLoguinSipraGui(JPasswordField cajaContraseñaLoguinSipraGui) {
+        this.cajaContraseñaLoguinSipraGui = cajaContraseñaLoguinSipraGui;
+    }
+
+    public JTextField getCajaUsuarioLoguinSipraGui() {
+        return cajaUsuarioLoguinSipraGui;
+    }
+
+    public void setCajaUsuarioLoguinSipraGui(JTextField cajaUsuarioLoguinSipraGui) {
+        this.cajaUsuarioLoguinSipraGui = cajaUsuarioLoguinSipraGui;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonInicioSesionLoguinGui;
+    private javax.swing.JLabel botonCerrar;
+    private javax.swing.JLabel botonMinimizar;
     private javax.swing.JLabel botonOlvidasteUsuarioContraseña;
+    private javax.swing.JButton btnEmpezar;
     private javax.swing.JCheckBox cajaCheckDocenteLoguinSipraGui;
     private javax.swing.JCheckBox cajaCheckEstudianteLoguinSipraGui;
     private javax.swing.JCheckBox cajaCheckExtensionLoguinSipraGui;
     private javax.swing.JPasswordField cajaContraseñaLoguinSipraGui;
     private javax.swing.JTextField cajaUsuarioLoguinSipraGui;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel ocultarContra;
+    private javax.swing.JLabel verContra;
     // End of variables declaration//GEN-END:variables
 
     private static class image {

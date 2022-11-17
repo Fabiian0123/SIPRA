@@ -1,24 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.unab.sipra.DocenteGui;
 
-/**
- *
- * @author fabia
- */
+import java.awt.Frame;
+import javax.swing.JOptionPane;
+
 public class interfazDocente extends javax.swing.JFrame {
 
     /**
      * Creates new form interfazDocente
      */
     public interfazDocente() {
-        setVisible(true);
-        this.setLocationRelativeTo(null);
         initComponents();
-        
-        
+        this.setLocationRelativeTo(null);
+     
+
     }
 
     /**
@@ -28,59 +22,25 @@ public class interfazDocente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botonAgregarEstudianteInterfazDocenteGui = new javax.swing.JButton();
-        botonEliminarEstudianteInterfazDocenteGui = new javax.swing.JButton();
-        botonSubirEvidenciasInterfazDocenteGui = new javax.swing.JButton();
-        botonCerrarSesionInterfazDocenteGui = new javax.swing.JButton();
-        botonBuscarEstudianteInterfazDocenteGui = new javax.swing.JButton();
-        botonEditarInterfazDocenteGui = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         cajaListaPracticantesInterfazDocenteGui = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
+        botonAggEstudianteInterfazDocente = new javax.swing.JButton();
+        botonCerrarSesionInterfazDocente = new javax.swing.JButton();
+        botonEliminarInterfazDocente = new javax.swing.JButton();
+        botonBuscarInterfazDocente = new javax.swing.JButton();
+        botonEditarInformacionEstudianteInterfazDocente = new javax.swing.JButton();
+        botonSubirEvidenciasInterfazDocente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Interfaz Docente");
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        botonAgregarEstudianteInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/agregar.png"))); // NOI18N
-        botonAgregarEstudianteInterfazDocenteGui.setContentAreaFilled(false);
-        botonAgregarEstudianteInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonAgregarEstudianteInterfazDocenteGui.setFocusable(false);
-        botonAgregarEstudianteInterfazDocenteGui.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarEstudianteInterfazDocenteGuiActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonAgregarEstudianteInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 40, -1));
-
-        botonEliminarEstudianteInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/borrar.png"))); // NOI18N
-        botonEliminarEstudianteInterfazDocenteGui.setContentAreaFilled(false);
-        botonEliminarEstudianteInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonEliminarEstudianteInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, 30, 40));
-
-        botonSubirEvidenciasInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/subir (2).png"))); // NOI18N
-        botonSubirEvidenciasInterfazDocenteGui.setContentAreaFilled(false);
-        botonSubirEvidenciasInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonSubirEvidenciasInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 50, 40, 40));
-
-        botonCerrarSesionInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/cerrar-sesion.png"))); // NOI18N
-        botonCerrarSesionInterfazDocenteGui.setContentAreaFilled(false);
-        botonCerrarSesionInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonCerrarSesionInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, 40, 40));
-
-        botonBuscarEstudianteInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/buscar.png"))); // NOI18N
-        botonBuscarEstudianteInterfazDocenteGui.setContentAreaFilled(false);
-        botonBuscarEstudianteInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonBuscarEstudianteInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, 40, 40));
-
-        botonEditarInterfazDocenteGui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/editar.png"))); // NOI18N
-        botonEditarInterfazDocenteGui.setContentAreaFilled(false);
-        botonEditarInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonEditarInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 40, 40));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -133,6 +93,57 @@ public class interfazDocente extends javax.swing.JFrame {
 
         getContentPane().add(cajaListaPracticantesInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 970, 400));
 
+        botonAggEstudianteInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\agregar.png")); // NOI18N
+        botonAggEstudianteInterfazDocente.setBorder(null);
+        botonAggEstudianteInterfazDocente.setContentAreaFilled(false);
+        botonAggEstudianteInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonAggEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, -1, 40));
+
+        botonCerrarSesionInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
+        botonCerrarSesionInterfazDocente.setBorder(null);
+        botonCerrarSesionInterfazDocente.setContentAreaFilled(false);
+        botonCerrarSesionInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarSesionInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarSesionInterfazDocenteMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCerrarSesionInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 40, -1));
+
+        botonEliminarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\borrar.png")); // NOI18N
+        botonEliminarInterfazDocente.setBorder(null);
+        botonEliminarInterfazDocente.setContentAreaFilled(false);
+        botonEliminarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonEliminarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 30, 30));
+
+        botonBuscarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\buscar.png")); // NOI18N
+        botonBuscarInterfazDocente.setBorder(null);
+        botonBuscarInterfazDocente.setContentAreaFilled(false);
+        botonBuscarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonBuscarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, 30));
+
+        botonEditarInformacionEstudianteInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\editar.png")); // NOI18N
+        botonEditarInformacionEstudianteInterfazDocente.setBorder(null);
+        botonEditarInformacionEstudianteInterfazDocente.setContentAreaFilled(false);
+        botonEditarInformacionEstudianteInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEditarInformacionEstudianteInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonEditarInformacionEstudianteInterfazDocenteMouseClicked(evt);
+            }
+        });
+        botonEditarInformacionEstudianteInterfazDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEditarInformacionEstudianteInterfazDocenteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonEditarInformacionEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 50, -1, 40));
+
+        botonSubirEvidenciasInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\subir (2).png")); // NOI18N
+        botonSubirEvidenciasInterfazDocente.setBorder(null);
+        botonSubirEvidenciasInterfazDocente.setContentAreaFilled(false);
+        botonSubirEvidenciasInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonSubirEvidenciasInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfazDocenteSI.png")); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 0), 4));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 530));
@@ -140,9 +151,21 @@ public class interfazDocente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonAgregarEstudianteInterfazDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarEstudianteInterfazDocenteGuiActionPerformed
+    private void botonEditarInformacionEstudianteInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarEstudianteInterfazDocenteGuiActionPerformed
+    }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
+
+    private void botonCerrarSesionInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazDocenteMouseClicked
+        int a = JOptionPane.YES_NO_OPTION;
+        int muestra = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",a);
+        if(muestra == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_botonCerrarSesionInterfazDocenteMouseClicked
+
+    private void botonEditarInformacionEstudianteInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
+        
+    }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -180,12 +203,12 @@ public class interfazDocente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonAgregarEstudianteInterfazDocenteGui;
-    private javax.swing.JButton botonBuscarEstudianteInterfazDocenteGui;
-    private javax.swing.JButton botonCerrarSesionInterfazDocenteGui;
-    private javax.swing.JButton botonEditarInterfazDocenteGui;
-    private javax.swing.JButton botonEliminarEstudianteInterfazDocenteGui;
-    private javax.swing.JButton botonSubirEvidenciasInterfazDocenteGui;
+    private javax.swing.JButton botonAggEstudianteInterfazDocente;
+    private javax.swing.JButton botonBuscarInterfazDocente;
+    private javax.swing.JButton botonCerrarSesionInterfazDocente;
+    private javax.swing.JButton botonEditarInformacionEstudianteInterfazDocente;
+    private javax.swing.JButton botonEliminarInterfazDocente;
+    private javax.swing.JButton botonSubirEvidenciasInterfazDocente;
     private javax.swing.JPanel cajaListaPracticantesInterfazDocenteGui;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

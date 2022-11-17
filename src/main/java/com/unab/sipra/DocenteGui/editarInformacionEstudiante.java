@@ -1,19 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.unab.sipra.DocenteGui;
 
-/**
- *
- * @author fabia
- */
+import java.awt.Frame;
+import javax.swing.JOptionPane;
+
 public class editarInformacionEstudiante extends javax.swing.JFrame {
 
-    /**
-     * Creates new form editarInformacionEstudiante
-     */
+   
     public editarInformacionEstudiante() {
+       
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 

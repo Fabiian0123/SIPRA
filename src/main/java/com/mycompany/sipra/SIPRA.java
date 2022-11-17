@@ -2,6 +2,7 @@
 package com.mycompany.sipra;
 
 import com.unab.sipra.LoguinGui.LoguinSipra;
+import com.unab.sipra.controladores.ControladorLoguinSipra;
 
 /**
  *
@@ -11,7 +12,6 @@ public class SIPRA {
 
     public static void main(String[] args) 
     {
-        LoguinSipra v = new LoguinSipra();
-        v.setVisible(true);
+        ControladorLoguinSipra.inicio();
     }
 }

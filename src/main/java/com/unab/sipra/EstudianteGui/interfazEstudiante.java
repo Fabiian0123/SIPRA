@@ -43,8 +43,8 @@ public class interfazEstudiante extends javax.swing.JFrame {
         barraAvanceInterfazEstudiante = new javax.swing.JProgressBar();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        botonSalirInterfazEstudiante = new javax.swing.JButton();
         nombreDelPPA = new javax.swing.JLabel();
+        botonCerrarSesionInterfazEstudiante = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -197,19 +197,19 @@ public class interfazEstudiante extends javax.swing.JFrame {
         jLabel11.setText("100%");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 460, -1, -1));
 
-        botonSalirInterfazEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unab/sipra/recursos/cerrar-sesion.png"))); // NOI18N
-        botonSalirInterfazEstudiante.setContentAreaFilled(false);
-        botonSalirInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonSalirInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, 30, 30));
-
         nombreDelPPA.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         nombreDelPPA.setForeground(new java.awt.Color(153, 153, 153));
         nombreDelPPA.setText("No adjuntado");
         getContentPane().add(nombreDelPPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 90, 20));
 
+        botonCerrarSesionInterfazEstudiante.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
+        botonCerrarSesionInterfazEstudiante.setContentAreaFilled(false);
+        botonCerrarSesionInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonCerrarSesionInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, 30, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfaz estudiante imagen.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 530));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -257,10 +257,10 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JProgressBar barraAvanceInterfazEstudiante;
     private javax.swing.JButton botonAdjuntaPpaInterfazEstudiante;
     private javax.swing.JButton botonAgregarInformacionEmpresaInterfazDocente;
+    private javax.swing.JButton botonCerrarSesionInterfazEstudiante;
     private javax.swing.JButton botonEditarInterfazEstudiante;
     private javax.swing.JButton botonEvaluacionFinalInterfazEstudiante;
     private javax.swing.JButton botonRealizaAutoevaluacionInterfazEstudiante;
-    private javax.swing.JButton botonSalirInterfazEstudiante;
     private javax.swing.JTextField cajaApellidosInterfazEstudiante;
     private javax.swing.JTextField cajaCorreoInterfazEstudiante;
     private javax.swing.JPanel cajaFotoInterfazEstudiante;
