@@ -3,14 +3,17 @@ package com.unab.sipra.EstudianteGui;
 import com.unab.sipra.controladores.ControladorAgregarInformacionEmpresaEstudianteGui;
 import com.unab.sipra.controladores.ControladorEditarTuInformacion;
 import com.unab.sipra.controladores.ControladorRealizarAutoevaluacionEstudianteGui;
+import java.awt.Image;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 public class interfazEstudiante extends javax.swing.JFrame {
@@ -40,7 +43,6 @@ public class interfazEstudiante extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cajaFotoInterfazEstudiante = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,6 +67,9 @@ public class interfazEstudiante extends javax.swing.JFrame {
         rutaPpa = new javax.swing.JLabel();
         botonCerrarSesionInterfazEstudiante = new javax.swing.JButton();
         botonMinimizarInterfzEstudianteGui = new javax.swing.JLabel();
+        rutaFotoPerfil = new javax.swing.JLabel();
+        botonSubirFoto = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -73,22 +78,6 @@ public class interfazEstudiante extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        cajaFotoInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        cajaFotoInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-
-        javax.swing.GroupLayout cajaFotoInterfazEstudianteLayout = new javax.swing.GroupLayout(cajaFotoInterfazEstudiante);
-        cajaFotoInterfazEstudiante.setLayout(cajaFotoInterfazEstudianteLayout);
-        cajaFotoInterfazEstudianteLayout.setHorizontalGroup(
-            cajaFotoInterfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 152, Short.MAX_VALUE)
-        );
-        cajaFotoInterfazEstudianteLayout.setVerticalGroup(
-            cajaFotoInterfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 142, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(cajaFotoInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 160, 150));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -267,6 +256,35 @@ public class interfazEstudiante extends javax.swing.JFrame {
         });
         getContentPane().add(botonMinimizarInterfzEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 10, -1, 30));
 
+        rutaFotoPerfil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        getContentPane().add(rutaFotoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 140));
+
+        botonSubirFoto.setBackground(new java.awt.Color(153, 0, 0));
+        botonSubirFoto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonSubirFoto.setForeground(new java.awt.Color(255, 255, 255));
+        botonSubirFoto.setText("Seleccionar Foto");
+        botonSubirFoto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonSubirFoto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFotoMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonSubirFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 110, -1));
+
+        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Guardar ");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 110, 20));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfaz estudiante imagen.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 530));
@@ -315,6 +333,32 @@ public class interfazEstudiante extends javax.swing.JFrame {
         this.setState(interfazEstudiante.ICONIFIED);
     }//GEN-LAST:event_botonMinimizarInterfzEstudianteGuiMouseClicked
 
+    private void botonSubirFotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFotoMouseClicked
+        String ruta = "";
+        JFileChooser jFileChooser = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG" ,"PNG");
+        jFileChooser.setFileFilter(filtrado);
+        
+        int respuesta = jFileChooser.showOpenDialog(this);
+        
+        if(respuesta == jFileChooser.APPROVE_OPTION){
+            ruta = jFileChooser.getSelectedFile().getAbsolutePath();
+            Image mImagen = new ImageIcon(ruta).getImage();
+            ImageIcon mIcon = new ImageIcon(mImagen.getScaledInstance(rutaFotoPerfil.getWidth(), rutaFotoPerfil.getHeight(), Image.SCALE_SMOOTH));
+            rutaFotoPerfil.setIcon(mIcon);
+             
+        }
+    }//GEN-LAST:event_botonSubirFotoMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        if(rutaFotoPerfil != null){
+            JOptionPane.showMessageDialog(null, "SE HA GUARDADO CORRECTAMENTE");
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO UNA IMAGEN");
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
     
     
     /**
@@ -361,12 +405,13 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JButton botonEvaluacionFinalInterfazEstudiante;
     private javax.swing.JLabel botonMinimizarInterfzEstudianteGui;
     private javax.swing.JButton botonRealizaAutoevaluacionInterfazEstudiante;
+    private javax.swing.JButton botonSubirFoto;
     private javax.swing.JTextField cajaApellidosInterfazEstudiante;
     private javax.swing.JTextField cajaCorreoInterfazEstudiante;
-    private javax.swing.JPanel cajaFotoInterfazEstudiante;
     private javax.swing.JTextField cajaNombresInterfazEstudiante;
     private javax.swing.JTextField cajaNumeroIdInterfazEstudiante;
     private javax.swing.JTextField cajaProgramaInterfazEstudiante;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -378,6 +423,7 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel rutaFotoPerfil;
     public javax.swing.JLabel rutaPpa;
     // End of variables declaration//GEN-END:variables
 }

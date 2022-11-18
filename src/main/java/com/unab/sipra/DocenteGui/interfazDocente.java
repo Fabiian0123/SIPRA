@@ -135,6 +135,11 @@ public class interfazDocente extends javax.swing.JFrame {
         botonEliminarInterfazDocente.setBorder(null);
         botonEliminarInterfazDocente.setContentAreaFilled(false);
         botonEliminarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEliminarInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonEliminarInterfazDocenteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonEliminarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 30, 30));
 
         botonBuscarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\buscar.png")); // NOI18N
@@ -269,6 +274,10 @@ public class interfazDocente extends javax.swing.JFrame {
         }
         System.out.println(cou);
     }//GEN-LAST:event_botonBuscarInterfazDocenteMouseClicked
+
+    private void botonEliminarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEliminarInterfazDocenteMouseClicked
+        JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO UN ESTUDIANTE");
+    }//GEN-LAST:event_botonEliminarInterfazDocenteMouseClicked
 
     /**
      * @param args the command line arguments

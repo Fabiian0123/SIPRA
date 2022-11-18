@@ -1,18 +1,32 @@
 
 package com.unab.sipra.DocenteGui;
 
-/**
- *
- * @author fabia
- */
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+
 public class subirEvidencias extends javax.swing.JFrame {
 
-    /**
-     * Creates new form subirEvidencias
-     */
+    
     public subirEvidencias() {
         initComponents();
         this.setLocationRelativeTo(null);
+        try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InstantiationException ex) {
+                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IllegalAccessException ex) {
+                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (UnsupportedLookAndFeelException ex) {
+                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        
     }
 
     /**
@@ -47,12 +61,12 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto5 = new javax.swing.JButton();
         botonSubirFoto6 = new javax.swing.JButton();
         botonGuardarSubirEvidenciasDocenteGui = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        rutaFotoUno = new javax.swing.JLabel();
+        rutaFotoTres = new javax.swing.JLabel();
+        rutaFotoDos = new javax.swing.JLabel();
+        rutaFotoCuatro = new javax.swing.JLabel();
+        rutaFotoCinco = new javax.swing.JLabel();
+        rutaFotoSeis = new javax.swing.JLabel();
         botonCancelarSubirEvidenciasDocenteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -168,6 +182,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto1.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto1.setText("Subir Foto");
         botonSubirFoto1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSubirFoto1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, -1, -1));
 
         botonSubirFoto2.setBackground(new java.awt.Color(102, 0, 0));
@@ -175,6 +194,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto2.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto2.setText("Subir Foto");
         botonSubirFoto2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFoto2MouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, -1, -1));
 
         botonSubirFoto3.setBackground(new java.awt.Color(102, 0, 0));
@@ -182,6 +206,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto3.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto3.setText("Subir Foto");
         botonSubirFoto3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFoto3MouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, -1, -1));
 
         botonSubirFoto4.setBackground(new java.awt.Color(102, 0, 0));
@@ -189,6 +218,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto4.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto4.setText("Subir Foto");
         botonSubirFoto4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFoto4MouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, -1, -1));
 
         botonSubirFoto5.setBackground(new java.awt.Color(102, 0, 0));
@@ -196,6 +230,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto5.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto5.setText("Subir Foto");
         botonSubirFoto5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFoto5MouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, -1, -1));
 
         botonSubirFoto6.setBackground(new java.awt.Color(102, 0, 0));
@@ -203,6 +242,11 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonSubirFoto6.setForeground(new java.awt.Color(255, 255, 255));
         botonSubirFoto6.setText("Subir Foto");
         botonSubirFoto6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirFoto6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirFoto6MouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, -1, -1));
 
         botonGuardarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
@@ -212,24 +256,12 @@ public class subirEvidencias extends javax.swing.JFrame {
         botonGuardarSubirEvidenciasDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarSubirEvidenciasDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonGuardarSubirEvidenciasDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 110, 40));
-
-        jLabel14.setText("Nombre Archivo 1");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, -1, -1));
-
-        jLabel16.setText("Nombre Archivo 3");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, -1, -1));
-
-        jLabel15.setText("Nombre Archivo 2");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, -1, -1));
-
-        jLabel17.setText("Nombre Archivo 4");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, -1, -1));
-
-        jLabel18.setText("Nombre Archivo 5");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, -1, -1));
-
-        jLabel19.setText("Nombre Archivo 5");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, -1, -1));
+        getContentPane().add(rutaFotoUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 140, 20));
+        getContentPane().add(rutaFotoTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, 140, 20));
+        getContentPane().add(rutaFotoDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 140, 20));
+        getContentPane().add(rutaFotoCuatro, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 140, 20));
+        getContentPane().add(rutaFotoCinco, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 140, 20));
+        getContentPane().add(rutaFotoSeis, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, 140, 20));
 
         botonCancelarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCancelarSubirEvidenciasDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -255,6 +287,59 @@ public class subirEvidencias extends javax.swing.JFrame {
     this.dispose();
     }//GEN-LAST:event_botonCancelarSubirEvidenciasDocenteGuiMouseClicked
 
+    private void botonSubirFoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSubirFoto1ActionPerformed
+        JFileChooser ab= new JFileChooser();
+       ab.showOpenDialog(this);
+       File rutaFotoUno = ab.getSelectedFile();
+       if(rutaFotoUno != null){
+         this.rutaFotoUno.setText(rutaFotoUno.getAbsolutePath());
+    }//GEN-LAST:event_botonSubirFoto1ActionPerformed
+    }
+    private void botonSubirFoto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto2MouseClicked
+        JFileChooser cd = new JFileChooser();
+        cd.showOpenDialog(this);
+        File rutaFotoDos = cd.getSelectedFile();
+        if (rutaFotoDos != null){
+            this.rutaFotoDos.setText(rutaFotoDos.getAbsolutePath());
+        }
+    }//GEN-LAST:event_botonSubirFoto2MouseClicked
+
+    private void botonSubirFoto3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto3MouseClicked
+        JFileChooser ab = new JFileChooser();
+        ab.showOpenDialog(this);
+        File rutaFotoTres = ab.getSelectedFile();
+        if(rutaFotoTres !=null){
+            this.rutaFotoTres.setText(rutaFotoTres.getAbsolutePath());
+        }
+    }//GEN-LAST:event_botonSubirFoto3MouseClicked
+
+    private void botonSubirFoto4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto4MouseClicked
+        JFileChooser ax = new JFileChooser();
+        ax.showOpenDialog(this);
+        File rutaFotoCuatro = ax.getSelectedFile();
+        if(rutaFotoCuatro != null){
+            this.rutaFotoCuatro.setText(rutaFotoCuatro.getAbsolutePath());
+        }
+    }//GEN-LAST:event_botonSubirFoto4MouseClicked
+
+    private void botonSubirFoto5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto5MouseClicked
+        JFileChooser pa = new JFileChooser();
+        pa.showOpenDialog(this);
+        File rutaFotoCinco = pa.getSelectedFile();
+        if (rutaFotoCinco != null){
+            this.rutaFotoCinco.setText(rutaFotoCinco.getAbsolutePath());
+        }
+    }//GEN-LAST:event_botonSubirFoto5MouseClicked
+
+    private void botonSubirFoto6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto6MouseClicked
+        JFileChooser ma = new JFileChooser();
+        ma.showOpenDialog(this);
+        File rutaFotoSeis = ma.getSelectedFile();
+        if(rutaFotoSeis != null){
+            this.rutaFotoSeis.setText(rutaFotoSeis.getAbsolutePath());
+        }
+    }//GEN-LAST:event_botonSubirFoto6MouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -285,6 +370,7 @@ public class subirEvidencias extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new subirEvidencias().setVisible(true);
             }
         });
@@ -310,12 +396,6 @@ public class subirEvidencias extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -324,5 +404,11 @@ public class subirEvidencias extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel rutaFotoCinco;
+    private javax.swing.JLabel rutaFotoCuatro;
+    private javax.swing.JLabel rutaFotoDos;
+    private javax.swing.JLabel rutaFotoSeis;
+    private javax.swing.JLabel rutaFotoTres;
+    private javax.swing.JLabel rutaFotoUno;
     // End of variables declaration//GEN-END:variables
 }

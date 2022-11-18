@@ -1,3 +1,4 @@
+com\unab\sipra\DocenteGui\interfazDocente$9.class
 com\unab\sipra\LoguinGui\LoguinSipra$9.class
 com\unab\sipra\DocenteGui\perfilEstudiante$1.class
 com\unab\sipra\EstudianteGui\realizarAutoevaluacion$1.class
@@ -29,6 +30,7 @@ com\unab\sipra\EstudianteGui\interfazEstudiante$5.class
 com\unab\sipra\DocenteGui\subirEvidencias.class
 com\unab\sipra\ExtensionGui\interfazExtension$2.class
 com\unab\sipra\EstudianteGui\interfazEstudiante$3.class
+com\unab\sipra\DocenteGui\subirEvidencias$8.class
 com\unab\sipra\ExtensionGui\listaCompletaDocentes$1.class
 com\unab\sipra\ExtensionGui\evidenciasDocente$1.class
 com\unab\sipra\DocenteGui\subirEvidencias$1.class
@@ -42,6 +44,7 @@ com\unab\sipra\modelos\Docentes.class
 com\unab\sipra\ExtensionGui\interfazExtension$7.class
 com\unab\sipra\ExtensionGui\perfilDocente.class
 com\unab\sipra\controladores\ControladorEditarTuInformacion.class
+com\unab\sipra\DocenteGui\subirEvidencias$7.class
 com\mycompany\sipra\SIPRA.class
 com\unab\sipra\DocenteGui\interfazDocente$6.class
 com\unab\sipra\EstudianteGui\realizarAutoevaluacion$2.class
@@ -52,6 +55,7 @@ com\unab\sipra\LoguinGui\LoguinSipra$4.class
 com\unab\sipra\controladores\ControladorListaCompletaDocentesExtensionGui.class
 com\unab\sipra\ExtensionGui\interfazExtension$1.class
 com\unab\sipra\DocenteGui\editarInformacionEstudiante$3.class
+com\unab\sipra\DocenteGui\subirEvidencias$3.class
 com\unab\sipra\ExtensionGui\perfilEstudianteAvance.class
 com\unab\sipra\DocenteGui\interfazDocente$2.class
 com\unab\sipra\EstudianteGui\interfazEstudiante.class
@@ -61,6 +65,7 @@ com\unab\sipra\EstudianteGui\interfazEstudiante$1.class
 com\unab\sipra\EstudianteGui\evaluacionFinal$2.class
 com\unab\sipra\LoguinGui\LoguinSipra$5.class
 com\unab\sipra\EstudianteGui\realizarAutoevaluacion.class
+com\unab\sipra\DocenteGui\subirEvidencias$6.class
 com\unab\sipra\EstudianteGui\interfazEstudiante$4.class
 com\unab\sipra\EstudianteGui\interfazEstudiante$9.class
 com\unab\sipra\ExtensionGui\listaCompletaDocentes$2.class
@@ -72,6 +77,7 @@ com\unab\sipra\DocenteGui\interfazDocente$8.class
 com\unab\sipra\ExtensionGui\listaCompletaEstudiantes$1.class
 com\unab\sipra\DocenteGui\interfazDocente$4.class
 com\unab\sipra\modelos\Estudiantes.class
+com\unab\sipra\DocenteGui\subirEvidencias$5.class
 com\unab\sipra\ExtensionGui\interfazExtension.class
 com\unab\sipra\DocenteGui\editarInformacionEstudiante.class
 com\unab\sipra\LoguinGui\LoguinSipra$7.class
@@ -87,6 +93,7 @@ com\unab\sipra\controladores\ControladorInterfazExtension.class
 com\unab\sipra\DocenteGui\editarInformacionEstudiante$4.class
 com\unab\sipra\EstudianteGui\evaluacionFinal.class
 com\unab\sipra\EstudianteGui\interfazEstudiante$7.class
+com\unab\sipra\DocenteGui\subirEvidencias$4.class
 com\unab\sipra\ExtensionGui\interfazExtension$4.class
 com\unab\sipra\ExtensionGui\listaCompletaEstudiantes$2.class
 com\unab\sipra\EstudianteGui\agregarInformacionEmpresa$1.class
