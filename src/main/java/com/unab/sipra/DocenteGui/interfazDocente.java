@@ -5,7 +5,10 @@ import com.unab.sipra.controladores.ControladorAgregarEstudianteDocenteGui;
 import com.unab.sipra.controladores.ControladorInterfazDocente;
 import com.unab.sipra.controladores.ControladorSubirEvidenciasDocenteGui;
 import java.awt.Frame;
+import java.time.Clock;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class interfazDocente extends javax.swing.JFrame {
 
@@ -256,6 +259,15 @@ public class interfazDocente extends javax.swing.JFrame {
 
     private void botonBuscarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarInterfazDocenteMouseClicked
        
+        int cou = 0;
+        if(evt.getClickCount() == 1 && cou == 0 ){
+             //ControladorInterfazDocente.btn_Mostrar();
+            panelBuscadorInterfazDocenteGui.setVisible(true);
+            cou++;
+        }else{
+            panelBuscadorInterfazDocenteGui.setVisible(false);
+        }
+        System.out.println(cou);
     }//GEN-LAST:event_botonBuscarInterfazDocenteMouseClicked
 
     /**
@@ -292,6 +304,23 @@ public class interfazDocente extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getBotonBuscarInterfazDocente() {
+        return botonBuscarInterfazDocente;
+    }
+
+    public void setBotonBuscarInterfazDocente(JButton botonBuscarInterfazDocente) {
+        this.botonBuscarInterfazDocente = botonBuscarInterfazDocente;
+    }
+
+    public JPanel getPanelBuscadorInterfazDocenteGui() {
+        return panelBuscadorInterfazDocenteGui;
+    }
+
+    public void setPanelBuscadorInterfazDocenteGui(JPanel panelBuscadorInterfazDocenteGui) {
+        this.panelBuscadorInterfazDocenteGui = panelBuscadorInterfazDocenteGui;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAggEstudianteInterfazDocente;
