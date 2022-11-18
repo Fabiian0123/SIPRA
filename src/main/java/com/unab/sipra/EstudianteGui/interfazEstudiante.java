@@ -64,6 +64,7 @@ public class interfazEstudiante extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         rutaPpa = new javax.swing.JLabel();
         botonCerrarSesionInterfazEstudiante = new javax.swing.JButton();
+        botonMinimizarInterfzEstudianteGui = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -255,7 +256,16 @@ public class interfazEstudiante extends javax.swing.JFrame {
                 botonCerrarSesionInterfazEstudianteMouseClicked(evt);
             }
         });
-        getContentPane().add(botonCerrarSesionInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, 30, 30));
+        getContentPane().add(botonCerrarSesionInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 30, 30));
+
+        botonMinimizarInterfzEstudianteGui.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (2).png")); // NOI18N
+        botonMinimizarInterfzEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonMinimizarInterfzEstudianteGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonMinimizarInterfzEstudianteGuiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonMinimizarInterfzEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 10, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfaz estudiante imagen.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
@@ -301,6 +311,10 @@ public class interfazEstudiante extends javax.swing.JFrame {
         ControladorRealizarAutoevaluacionEstudianteGui.inicio();
     }//GEN-LAST:event_botonEvaluacionFinalInterfazEstudianteMouseClicked
 
+    private void botonMinimizarInterfzEstudianteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfzEstudianteGuiMouseClicked
+        this.setState(interfazEstudiante.ICONIFIED);
+    }//GEN-LAST:event_botonMinimizarInterfzEstudianteGuiMouseClicked
+
     
     
     /**
@@ -345,6 +359,7 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JButton botonCerrarSesionInterfazEstudiante;
     private javax.swing.JButton botonEditarInterfazEstudiante;
     private javax.swing.JButton botonEvaluacionFinalInterfazEstudiante;
+    private javax.swing.JLabel botonMinimizarInterfzEstudianteGui;
     private javax.swing.JButton botonRealizaAutoevaluacionInterfazEstudiante;
     private javax.swing.JTextField cajaApellidosInterfazEstudiante;
     private javax.swing.JTextField cajaCorreoInterfazEstudiante;

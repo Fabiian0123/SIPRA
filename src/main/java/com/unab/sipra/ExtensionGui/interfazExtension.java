@@ -1,6 +1,7 @@
 
 package com.unab.sipra.ExtensionGui;
 
+import com.unab.sipra.controladores.ControladorListaCompletaDocentesExtensionGui;
 import com.unab.sipra.controladores.ControladorVerListaPracticantesExtensionGui;
 import javax.swing.JOptionPane;
 
@@ -33,6 +34,7 @@ public class interfazExtension extends javax.swing.JFrame {
         botonBuscarSeguimientoDocenteEntensionGui = new javax.swing.JButton();
         botonListaDocentesSeguimientoDocenteExtensionGui = new javax.swing.JButton();
         botonSalirInterfazExtension = new javax.swing.JButton();
+        botonMinimizarInterfazExtension = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -120,6 +122,11 @@ public class interfazExtension extends javax.swing.JFrame {
         botonListaDocentesSeguimientoDocenteExtensionGui.setText(" VER LISTA COMPLETA DE DOCENTES");
         botonListaDocentesSeguimientoDocenteExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonListaDocentesSeguimientoDocenteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonListaDocentesSeguimientoDocenteExtensionGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonListaDocentesSeguimientoDocenteExtensionGuiMouseClicked(evt);
+            }
+        });
         botonListaDocentesSeguimientoDocenteExtensionGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonListaDocentesSeguimientoDocenteExtensionGuiActionPerformed(evt);
@@ -136,7 +143,16 @@ public class interfazExtension extends javax.swing.JFrame {
                 botonSalirInterfazExtensionMouseClicked(evt);
             }
         });
-        getContentPane().add(botonSalirInterfazExtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 30, 40, 40));
+        getContentPane().add(botonSalirInterfazExtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 40, 40));
+
+        botonMinimizarInterfazExtension.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (2).png")); // NOI18N
+        botonMinimizarInterfazExtension.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonMinimizarInterfazExtension.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonMinimizarInterfazExtensionMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonMinimizarInterfazExtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen interfaz extension.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
@@ -167,6 +183,14 @@ public class interfazExtension extends javax.swing.JFrame {
     private void botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked
         ControladorVerListaPracticantesExtensionGui.inicio();
     }//GEN-LAST:event_botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked
+
+    private void botonListaDocentesSeguimientoDocenteExtensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListaDocentesSeguimientoDocenteExtensionGuiMouseClicked
+        ControladorListaCompletaDocentesExtensionGui.inicio();
+    }//GEN-LAST:event_botonListaDocentesSeguimientoDocenteExtensionGuiMouseClicked
+
+    private void botonMinimizarInterfazExtensionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfazExtensionMouseClicked
+    this.setState(interfazExtension.ICONIFIED);
+    }//GEN-LAST:event_botonMinimizarInterfazExtensionMouseClicked
     
     /**
      * @param args the command line arguments
@@ -208,6 +232,7 @@ public class interfazExtension extends javax.swing.JFrame {
     private javax.swing.JButton botonBuscarSeguimientoEstudianteExtensionGui;
     private javax.swing.JButton botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui;
     private javax.swing.JButton botonListaDocentesSeguimientoDocenteExtensionGui;
+    private javax.swing.JLabel botonMinimizarInterfazExtension;
     private javax.swing.JButton botonSalirInterfazExtension;
     private javax.swing.JTextField cajaNumeroIdentificacionSeguimientoDocenteExtensionGui;
     private javax.swing.JTextField cajaNumeroIdentificacionSeguimientoEstudianteExtensionGui;

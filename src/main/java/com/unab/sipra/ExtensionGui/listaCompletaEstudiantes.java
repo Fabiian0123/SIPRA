@@ -60,7 +60,9 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 28, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel3);
@@ -73,10 +75,12 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         );
         cajaListaEstudiantesExtensionGuiLayout.setVerticalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cajaListaEstudiantesExtensionGuiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
         );
 
-        getContentPane().add(cajaListaEstudiantesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 870, 310));
+        getContentPane().add(cajaListaEstudiantesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 870, 300));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen lista de estudiantes rol extension seguimiento estudiante.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));

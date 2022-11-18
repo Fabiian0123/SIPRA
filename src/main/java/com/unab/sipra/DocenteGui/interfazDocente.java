@@ -1,6 +1,7 @@
 package com.unab.sipra.DocenteGui;
 
 import com.unab.sipra.controladores.ControladorAgregarEstudianteDocenteGui;
+
 import com.unab.sipra.controladores.ControladorInterfazDocente;
 import com.unab.sipra.controladores.ControladorSubirEvidenciasDocenteGui;
 import java.awt.Frame;
@@ -38,6 +39,9 @@ public class interfazDocente extends javax.swing.JFrame {
         botonEditarInformacionEstudianteInterfazDocente = new javax.swing.JButton();
         botonSubirEvidenciasInterfazDocente = new javax.swing.JButton();
         botonMinimizarInterfazDocente = new javax.swing.JLabel();
+        panelBuscadorInterfazDocenteGui = new javax.swing.JPanel();
+        buscadorInterfazDocenteGui = new javax.swing.JTextField();
+        botonBuscarBuscadorInterfazDocenteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -134,6 +138,11 @@ public class interfazDocente extends javax.swing.JFrame {
         botonBuscarInterfazDocente.setBorder(null);
         botonBuscarInterfazDocente.setContentAreaFilled(false);
         botonBuscarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonBuscarInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonBuscarInterfazDocenteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonBuscarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, 30));
 
         botonEditarInformacionEstudianteInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\editar.png")); // NOI18N
@@ -171,6 +180,40 @@ public class interfazDocente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botonMinimizarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, 30));
+
+        panelBuscadorInterfazDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
+        panelBuscadorInterfazDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
+        buscadorInterfazDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
+        buscadorInterfazDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
+        buscadorInterfazDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+
+        botonBuscarBuscadorInterfazDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonBuscarBuscadorInterfazDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonBuscarBuscadorInterfazDocenteGui.setText("BUSCAR");
+        botonBuscarBuscadorInterfazDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        botonBuscarBuscadorInterfazDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout panelBuscadorInterfazDocenteGuiLayout = new javax.swing.GroupLayout(panelBuscadorInterfazDocenteGui);
+        panelBuscadorInterfazDocenteGui.setLayout(panelBuscadorInterfazDocenteGuiLayout);
+        panelBuscadorInterfazDocenteGuiLayout.setHorizontalGroup(
+            panelBuscadorInterfazDocenteGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscadorInterfazDocenteGuiLayout.createSequentialGroup()
+                .addComponent(buscadorInterfazDocenteGui, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonBuscarBuscadorInterfazDocenteGui)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        panelBuscadorInterfazDocenteGuiLayout.setVerticalGroup(
+            panelBuscadorInterfazDocenteGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscadorInterfazDocenteGuiLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(panelBuscadorInterfazDocenteGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buscadorInterfazDocenteGui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonBuscarBuscadorInterfazDocenteGui)))
+        );
+
+        getContentPane().add(panelBuscadorInterfazDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, 350, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfazDocenteSI.png")); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 0), 4));
@@ -211,6 +254,10 @@ public class interfazDocente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonCerrarSesionInterfazDocenteActionPerformed
 
+    private void botonBuscarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarInterfazDocenteMouseClicked
+       
+    }//GEN-LAST:event_botonBuscarInterfazDocenteMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -248,12 +295,14 @@ public class interfazDocente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAggEstudianteInterfazDocente;
+    private javax.swing.JButton botonBuscarBuscadorInterfazDocenteGui;
     private javax.swing.JButton botonBuscarInterfazDocente;
     private javax.swing.JButton botonCerrarSesionInterfazDocente;
     private javax.swing.JButton botonEditarInformacionEstudianteInterfazDocente;
     private javax.swing.JButton botonEliminarInterfazDocente;
     private javax.swing.JLabel botonMinimizarInterfazDocente;
     private javax.swing.JButton botonSubirEvidenciasInterfazDocente;
+    private javax.swing.JTextField buscadorInterfazDocenteGui;
     private javax.swing.JPanel cajaListaPracticantesInterfazDocenteGui;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -261,5 +310,6 @@ public class interfazDocente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel panelBuscadorInterfazDocenteGui;
     // End of variables declaration//GEN-END:variables
 }
