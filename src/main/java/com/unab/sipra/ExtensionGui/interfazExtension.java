@@ -1,12 +1,16 @@
 
 package com.unab.sipra.ExtensionGui;
 
+import com.unab.sipra.controladores.ControladorVerListaPracticantesExtensionGui;
+import javax.swing.JOptionPane;
+
 
 public class interfazExtension extends javax.swing.JFrame {
 
     
     public interfazExtension() {
         initComponents();
+        this.setLocationRelativeTo(this);
        
        
     }
@@ -31,8 +35,10 @@ public class interfazExtension extends javax.swing.JFrame {
         botonSalirInterfazExtension = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Interfaz Extensión");
+        setAlwaysOnTop(true);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -67,6 +73,11 @@ public class interfazExtension extends javax.swing.JFrame {
         botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.setText("VER LISTA COMPLETA DE PRACTICANTES");
         botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked(evt);
+            }
+        });
         botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiActionPerformed(evt);
@@ -117,8 +128,14 @@ public class interfazExtension extends javax.swing.JFrame {
         getContentPane().add(botonListaDocentesSeguimientoDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, 320, 50));
 
         botonSalirInterfazExtension.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
+        botonSalirInterfazExtension.setBorder(null);
         botonSalirInterfazExtension.setContentAreaFilled(false);
         botonSalirInterfazExtension.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSalirInterfazExtension.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSalirInterfazExtensionMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSalirInterfazExtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 30, 40, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen interfaz extension.png")); // NOI18N
@@ -140,6 +157,17 @@ public class interfazExtension extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonListaDocentesSeguimientoDocenteExtensionGuiActionPerformed
 
+    private void botonSalirInterfazExtensionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSalirInterfazExtensionMouseClicked
+        int c = JOptionPane.YES_NO_OPTION;
+        int mus = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",c);
+        if(mus == 0){
+            System.exit(0);
+    }//GEN-LAST:event_botonSalirInterfazExtensionMouseClicked
+    }
+    private void botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked
+        ControladorVerListaPracticantesExtensionGui.inicio();
+    }//GEN-LAST:event_botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiMouseClicked
+    
     /**
      * @param args the command line arguments
      */

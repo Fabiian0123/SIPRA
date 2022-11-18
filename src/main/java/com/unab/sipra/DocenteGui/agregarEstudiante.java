@@ -37,18 +37,18 @@ public class agregarEstudiante extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaNombresAgregarEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombresAgregarEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombresAgregarEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombresAgregarEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaNombresAgregarEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 740, 30));
 
         cajaApellidosAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaApellidosAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaApellidosAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaApellidosAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         cajaApellidosAgregarEstudianteGui.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         getContentPane().add(cajaApellidosAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 740, 30));
 
         cajaNumeroIdentidadAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNumeroIdentidadAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNumeroIdentidadAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNumeroIdentidadAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         cajaNumeroIdentidadAgregarEstudianteGui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,22 +58,22 @@ public class agregarEstudiante extends javax.swing.JFrame {
         getContentPane().add(cajaNumeroIdentidadAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 630, 30));
 
         cajaCorreoAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaCorreoAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaCorreoAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaCorreoAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaCorreoAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 760, 30));
 
         cajaProgramaAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaProgramaAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaProgramaAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaProgramaAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaProgramaAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 740, 30));
 
         cajaNombreEmpresaAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombreEmpresaAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombreEmpresaAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreEmpresaAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaNombreEmpresaAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 680, 30));
 
         cajaNombreJefeAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombreJefeAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombreJefeAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreJefeAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaNombreJefeAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 640, 30));
 

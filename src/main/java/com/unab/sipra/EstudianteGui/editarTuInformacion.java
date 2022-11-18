@@ -1,12 +1,9 @@
-
 package com.unab.sipra.EstudianteGui;
 
 
 public class editarTuInformacion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form editarTuInformacion
-     */
+    
     public editarTuInformacion() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -28,8 +25,10 @@ public class editarTuInformacion extends javax.swing.JFrame {
         botonCerrarEditarTuInformacionEstudianteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Edita Tu Informaición");
+        setAlwaysOnTop(true);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaApellidosEditarTuInformacionEstudianteGui.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,7 +100,7 @@ public class editarTuInformacion extends javax.swing.JFrame {
     }//GEN-LAST:event_cajaNumeroIdEditarTuInformacionEstudianteGuiActionPerformed
 
     private void botonCerrarEditarTuInformacionEstudianteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarEditarTuInformacionEstudianteGuiMouseClicked
-      
+        dispose();
     }//GEN-LAST:event_botonCerrarEditarTuInformacionEstudianteGuiMouseClicked
 
     /**

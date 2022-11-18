@@ -30,18 +30,21 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
         cajaDireccionEmpresaAgregarInfoEmpresa = new javax.swing.JTextField();
         cajaNumeroContactoJefeAggInfoEmpresa = new javax.swing.JTextField();
         cajaNombreJefeInmediatoAggInfoEmpresa = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         cajaActividadesQueRealizaAggInfoEmpresa = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Agregar Infromacion Empresarial");
+        setAlwaysOnTop(true);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaNombreEmpresaAggInfoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
         cajaNombreEmpresaAggInfoEmpresa.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cajaNombreEmpresaAggInfoEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        cajaNombreEmpresaAggInfoEmpresa.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreEmpresaAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreEmpresaAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 700, -1));
 
@@ -57,7 +60,7 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
         botonGuardarAggInfoEmpresa.setText("GUARDAR");
         botonGuardarAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarAggInfoEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(botonGuardarAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 440, 110, 30));
+        getContentPane().add(botonGuardarAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 440, 110, 40));
 
         cajaDireccionEmpresaAgregarInfoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
         cajaDireccionEmpresaAgregarInfoEmpresa.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -77,6 +80,19 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
         cajaNombreJefeInmediatoAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreJefeInmediatoAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 680, -1));
 
+        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("CANCELAR");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 110, 40));
+
         cajaActividadesQueRealizaAggInfoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
         cajaActividadesQueRealizaAggInfoEmpresa.setColumns(20);
         cajaActividadesQueRealizaAggInfoEmpresa.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -93,6 +109,10 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -137,6 +157,7 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
     private javax.swing.JTextField cajaNombreEmpresaAggInfoEmpresa;
     private javax.swing.JTextField cajaNombreJefeInmediatoAggInfoEmpresa;
     private javax.swing.JTextField cajaNumeroContactoJefeAggInfoEmpresa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

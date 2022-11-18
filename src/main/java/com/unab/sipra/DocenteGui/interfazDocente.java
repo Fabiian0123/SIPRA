@@ -117,6 +117,11 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonCerrarSesionInterfazDocenteMouseClicked(evt);
             }
         });
+        botonCerrarSesionInterfazDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCerrarSesionInterfazDocenteActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonCerrarSesionInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 40, -1));
 
         botonEliminarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\borrar.png")); // NOI18N
@@ -201,6 +206,10 @@ public class interfazDocente extends javax.swing.JFrame {
     private void botonAggEstudianteInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAggEstudianteInterfazDocenteMouseClicked
         ControladorAgregarEstudianteDocenteGui.inicio();
     }//GEN-LAST:event_botonAggEstudianteInterfazDocenteMouseClicked
+
+    private void botonCerrarSesionInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazDocenteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCerrarSesionInterfazDocenteActionPerformed
 
     /**
      * @param args the command line arguments

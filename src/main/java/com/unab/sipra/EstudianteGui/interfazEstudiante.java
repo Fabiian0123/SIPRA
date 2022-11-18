@@ -1,6 +1,16 @@
 package com.unab.sipra.EstudianteGui;
 
+import com.unab.sipra.controladores.ControladorAgregarInformacionEmpresaEstudianteGui;
 import com.unab.sipra.controladores.ControladorEditarTuInformacion;
+import com.unab.sipra.controladores.ControladorRealizarAutoevaluacionEstudianteGui;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 public class interfazEstudiante extends javax.swing.JFrame {
@@ -9,6 +19,17 @@ public class interfazEstudiante extends javax.swing.JFrame {
     public interfazEstudiante() {
         initComponents();
         this.setLocationRelativeTo(null);
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+        }
     
     }
 
@@ -41,13 +62,15 @@ public class interfazEstudiante extends javax.swing.JFrame {
         barraAvanceInterfazEstudiante = new javax.swing.JProgressBar();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        nombreDelPPA = new javax.swing.JLabel();
+        rutaPpa = new javax.swing.JLabel();
         botonCerrarSesionInterfazEstudiante = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Interfaz Estudiante");
         setAlwaysOnTop(true);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaFotoInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
@@ -150,6 +173,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         botonRealizaAutoevaluacionInterfazEstudiante.setText("REALIZAR AUTOEVALUACIÓN");
         botonRealizaAutoevaluacionInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonRealizaAutoevaluacionInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonRealizaAutoevaluacionInterfazEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonRealizaAutoevaluacionInterfazEstudianteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonRealizaAutoevaluacionInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 250, 50));
 
         botonAgregarInformacionEmpresaInterfazDocente.setBackground(new java.awt.Color(153, 0, 0));
@@ -158,6 +186,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         botonAgregarInformacionEmpresaInterfazDocente.setText("AGREGAR INFORMACIÓN DE LA EMPRESA");
         botonAgregarInformacionEmpresaInterfazDocente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         botonAgregarInformacionEmpresaInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonAgregarInformacionEmpresaInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonAgregarInformacionEmpresaInterfazDocenteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonAgregarInformacionEmpresaInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 350, 50));
 
         botonAdjuntaPpaInterfazEstudiante.setBackground(new java.awt.Color(153, 0, 0));
@@ -166,6 +199,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         botonAdjuntaPpaInterfazEstudiante.setText("ADJUNTAR PPA");
         botonAdjuntaPpaInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         botonAdjuntaPpaInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonAdjuntaPpaInterfazEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAdjuntaPpaInterfazEstudianteActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonAdjuntaPpaInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, 250, 50));
 
         botonEvaluacionFinalInterfazEstudiante.setBackground(new java.awt.Color(153, 0, 0));
@@ -174,6 +212,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         botonEvaluacionFinalInterfazEstudiante.setText("EVALUACIÓN FINAL");
         botonEvaluacionFinalInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         botonEvaluacionFinalInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEvaluacionFinalInterfazEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonEvaluacionFinalInterfazEstudianteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonEvaluacionFinalInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 250, 50));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -200,14 +243,18 @@ public class interfazEstudiante extends javax.swing.JFrame {
         jLabel11.setText("100%");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 460, -1, -1));
 
-        nombreDelPPA.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        nombreDelPPA.setForeground(new java.awt.Color(153, 153, 153));
-        nombreDelPPA.setText("No adjuntado");
-        getContentPane().add(nombreDelPPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 90, 20));
+        rutaPpa.setForeground(new java.awt.Color(153, 153, 153));
+        getContentPane().add(rutaPpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, 190, 20));
 
         botonCerrarSesionInterfazEstudiante.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
+        botonCerrarSesionInterfazEstudiante.setBorder(null);
         botonCerrarSesionInterfazEstudiante.setContentAreaFilled(false);
         botonCerrarSesionInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarSesionInterfazEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarSesionInterfazEstudianteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonCerrarSesionInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, 30, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\interfaz estudiante imagen.png")); // NOI18N
@@ -225,6 +272,37 @@ public class interfazEstudiante extends javax.swing.JFrame {
        ControladorEditarTuInformacion.inicio();
     }//GEN-LAST:event_botonEditarInterfazEstudianteMouseClicked
 
+    private void botonCerrarSesionInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazEstudianteMouseClicked
+       int b = JOptionPane.YES_NO_OPTION;
+        int mues = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",b);
+        if(mues == 0){
+            System.exit(0);
+    }//GEN-LAST:event_botonCerrarSesionInterfazEstudianteMouseClicked
+    }
+    private void botonRealizaAutoevaluacionInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonRealizaAutoevaluacionInterfazEstudianteMouseClicked
+        ControladorRealizarAutoevaluacionEstudianteGui.inicio();
+    }//GEN-LAST:event_botonRealizaAutoevaluacionInterfazEstudianteMouseClicked
+
+    private void botonAgregarInformacionEmpresaInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAgregarInformacionEmpresaInterfazDocenteMouseClicked
+        ControladorAgregarInformacionEmpresaEstudianteGui.inicio();
+    }//GEN-LAST:event_botonAgregarInformacionEmpresaInterfazDocenteMouseClicked
+
+    private void botonAdjuntaPpaInterfazEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAdjuntaPpaInterfazEstudianteActionPerformed
+       JFileChooser jf = new JFileChooser();
+       jf.showOpenDialog(this);
+       File rutaPpa = jf.getSelectedFile();
+       if(rutaPpa != null){
+           //rutaPpa.setText(rutaPpa.getAbsolutePath());
+           this.rutaPpa.setText(rutaPpa.getAbsolutePath());
+       }
+    }//GEN-LAST:event_botonAdjuntaPpaInterfazEstudianteActionPerformed
+
+    private void botonEvaluacionFinalInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEvaluacionFinalInterfazEstudianteMouseClicked
+        ControladorRealizarAutoevaluacionEstudianteGui.inicio();
+    }//GEN-LAST:event_botonEvaluacionFinalInterfazEstudianteMouseClicked
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -285,6 +363,6 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel nombreDelPPA;
+    public javax.swing.JLabel rutaPpa;
     // End of variables declaration//GEN-END:variables
 }

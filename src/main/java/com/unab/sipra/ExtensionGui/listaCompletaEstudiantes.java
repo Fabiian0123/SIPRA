@@ -1,20 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.unab.sipra.ExtensionGui;
 
-/**
- *
- * @author fabia
- */
+
 public class listaCompletaEstudiantes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form listaCompletaEstudiantes
-     */
+  
     public listaCompletaEstudiantes() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -24,6 +17,7 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        botonCerrarListaCompletaEstudianteExtensionGui = new javax.swing.JButton();
         cajaListaEstudiantesExtensionGui = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
@@ -32,8 +26,23 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista Completa De Estudiantes");
+        setAlwaysOnTop(true);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        botonCerrarListaCompletaEstudianteExtensionGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarListaCompletaEstudianteExtensionGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCerrarListaCompletaEstudianteExtensionGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarListaCompletaEstudianteExtensionGui.setText("CERRAR");
+        botonCerrarListaCompletaEstudianteExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        botonCerrarListaCompletaEstudianteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarListaCompletaEstudianteExtensionGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCerrarListaCompletaEstudianteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 80, 30));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -45,14 +54,13 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.DEFAULT_SIZE, 858, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.PREFERRED_SIZE, 952, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+            .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(jPanel3);
@@ -61,7 +69,7 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         cajaListaEstudiantesExtensionGui.setLayout(cajaListaEstudiantesExtensionGuiLayout);
         cajaListaEstudiantesExtensionGuiLayout.setHorizontalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 870, Short.MAX_VALUE)
         );
         cajaListaEstudiantesExtensionGuiLayout.setVerticalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,10 +80,14 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen lista de estudiantes rol extension seguimiento estudiante.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 440));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked
+        dispose();
+    }//GEN-LAST:event_botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -113,6 +125,7 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCerrarListaCompletaEstudianteExtensionGui;
     private javax.swing.JPanel cajaListaEstudiantesExtensionGui;
     private javax.swing.JLabel cajaListadeDocentes;
     private javax.swing.JLabel jLabel1;
