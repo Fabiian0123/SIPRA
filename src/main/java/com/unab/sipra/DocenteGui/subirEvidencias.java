@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.unab.sipra.DocenteGui;
 
 /**
@@ -15,6 +12,7 @@ public class subirEvidencias extends javax.swing.JFrame {
      */
     public subirEvidencias() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -55,11 +53,13 @@ public class subirEvidencias extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        botonCancelarSubirEvidenciasDocenteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Subir Evidencias ");
         setAutoRequestFocus(false);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -231,12 +231,29 @@ public class subirEvidencias extends javax.swing.JFrame {
         jLabel19.setText("Nombre Archivo 5");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, -1, -1));
 
+        botonCancelarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
+        botonCancelarSubirEvidenciasDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCancelarSubirEvidenciasDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCancelarSubirEvidenciasDocenteGui.setText("CANCELAR");
+        botonCancelarSubirEvidenciasDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        botonCancelarSubirEvidenciasDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCancelarSubirEvidenciasDocenteGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCancelarSubirEvidenciasDocenteGuiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCancelarSubirEvidenciasDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 110, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen subir evidencias docente gui.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonCancelarSubirEvidenciasDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarSubirEvidenciasDocenteGuiMouseClicked
+    this.dispose();
+    }//GEN-LAST:event_botonCancelarSubirEvidenciasDocenteGuiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -274,6 +291,7 @@ public class subirEvidencias extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCancelarSubirEvidenciasDocenteGui;
     private javax.swing.JButton botonGuardarSubirEvidenciasDocenteGui;
     private javax.swing.JButton botonSubirFoto1;
     private javax.swing.JButton botonSubirFoto2;

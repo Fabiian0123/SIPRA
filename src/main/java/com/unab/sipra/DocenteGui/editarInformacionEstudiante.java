@@ -120,7 +120,7 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonGuardarEditarPerfilEstudianteDocenteGuiMouseClicked
 
     private void botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked
-       
+        this.dispose();
     }//GEN-LAST:event_botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked
 
     /**

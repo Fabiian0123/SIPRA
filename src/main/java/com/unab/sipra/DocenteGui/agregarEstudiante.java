@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.unab.sipra.DocenteGui;
 
-/**
- *
- * @author fabia
- */
+
 public class agregarEstudiante extends javax.swing.JFrame {
 
     /**
@@ -15,6 +9,7 @@ public class agregarEstudiante extends javax.swing.JFrame {
      */
     public agregarEstudiante() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -32,10 +27,12 @@ public class agregarEstudiante extends javax.swing.JFrame {
         cajaNombreEmpresaAgregarEstudianteGui = new javax.swing.JTextField();
         cajaNombreJefeAgregarEstudianteGui = new javax.swing.JTextField();
         botonGuardarAgregarEstudianteGui = new javax.swing.JButton();
+        botonCerrarAgregarEstudianteDocenteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Agrega Un Nuevo Estudiante");
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -88,6 +85,20 @@ public class agregarEstudiante extends javax.swing.JFrame {
         botonGuardarAgregarEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonGuardarAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(767, 420, 130, 40));
 
+        botonCerrarAgregarEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarAgregarEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCerrarAgregarEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarAgregarEstudianteDocenteGui.setText("CERRAR");
+        botonCerrarAgregarEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        botonCerrarAgregarEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarAgregarEstudianteDocenteGui.setFocusable(false);
+        botonCerrarAgregarEstudianteDocenteGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarAgregarEstudianteDocenteGuiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCerrarAgregarEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 100, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\agregar estudiante imagen.png")); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 51), 4));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 480));
@@ -98,6 +109,10 @@ public class agregarEstudiante extends javax.swing.JFrame {
     private void cajaNumeroIdentidadAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNumeroIdentidadAgregarEstudianteGuiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNumeroIdentidadAgregarEstudianteGuiActionPerformed
+
+    private void botonCerrarAgregarEstudianteDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,6 +150,7 @@ public class agregarEstudiante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCerrarAgregarEstudianteDocenteGui;
     private javax.swing.JButton botonGuardarAgregarEstudianteGui;
     private javax.swing.JTextField cajaApellidosAgregarEstudianteGui;
     private javax.swing.JTextField cajaCorreoAgregarEstudianteGui;

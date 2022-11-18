@@ -1,6 +1,8 @@
 package com.unab.sipra.DocenteGui;
 
+import com.unab.sipra.controladores.ControladorAgregarEstudianteDocenteGui;
 import com.unab.sipra.controladores.ControladorInterfazDocente;
+import com.unab.sipra.controladores.ControladorSubirEvidenciasDocenteGui;
 import java.awt.Frame;
 import javax.swing.JOptionPane;
 
@@ -99,6 +101,11 @@ public class interfazDocente extends javax.swing.JFrame {
         botonAggEstudianteInterfazDocente.setBorder(null);
         botonAggEstudianteInterfazDocente.setContentAreaFilled(false);
         botonAggEstudianteInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonAggEstudianteInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonAggEstudianteInterfazDocenteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonAggEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, -1, 40));
 
         botonCerrarSesionInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
@@ -144,6 +151,11 @@ public class interfazDocente extends javax.swing.JFrame {
         botonSubirEvidenciasInterfazDocente.setBorder(null);
         botonSubirEvidenciasInterfazDocente.setContentAreaFilled(false);
         botonSubirEvidenciasInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonSubirEvidenciasInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSubirEvidenciasInterfazDocenteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonSubirEvidenciasInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, 30));
 
         botonMinimizarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (2).png")); // NOI18N
@@ -181,6 +193,14 @@ public class interfazDocente extends javax.swing.JFrame {
     private void botonMinimizarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfazDocenteMouseClicked
        this.setState(interfazDocente.ICONIFIED);
     }//GEN-LAST:event_botonMinimizarInterfazDocenteMouseClicked
+
+    private void botonSubirEvidenciasInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirEvidenciasInterfazDocenteMouseClicked
+        ControladorSubirEvidenciasDocenteGui.inicio();
+    }//GEN-LAST:event_botonSubirEvidenciasInterfazDocenteMouseClicked
+
+    private void botonAggEstudianteInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAggEstudianteInterfazDocenteMouseClicked
+        ControladorAgregarEstudianteDocenteGui.inicio();
+    }//GEN-LAST:event_botonAggEstudianteInterfazDocenteMouseClicked
 
     /**
      * @param args the command line arguments

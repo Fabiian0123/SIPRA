@@ -1,5 +1,7 @@
 package com.unab.sipra.EstudianteGui;
 
+import com.unab.sipra.controladores.ControladorEditarTuInformacion;
+
 
 public class interfazEstudiante extends javax.swing.JFrame {
 
@@ -135,6 +137,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         botonEditarInterfazEstudiante.setText("EDITAR");
         botonEditarInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonEditarInterfazEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEditarInterfazEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonEditarInterfazEstudianteMouseClicked(evt);
+            }
+        });
         getContentPane().add(botonEditarInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 90, 30));
 
         botonRealizaAutoevaluacionInterfazEstudiante.setBackground(new java.awt.Color(153, 0, 0));
@@ -213,6 +220,10 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private void cajaNumeroIdInterfazEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNumeroIdInterfazEstudianteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNumeroIdInterfazEstudianteActionPerformed
+
+    private void botonEditarInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEditarInterfazEstudianteMouseClicked
+       ControladorEditarTuInformacion.inicio();
+    }//GEN-LAST:event_botonEditarInterfazEstudianteMouseClicked
 
     /**
      * @param args the command line arguments

@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.unab.sipra.EstudianteGui;
 
-/**
- *
- * @author fabia
- */
+
 public class editarTuInformacion extends javax.swing.JFrame {
 
     /**
@@ -15,6 +9,7 @@ public class editarTuInformacion extends javax.swing.JFrame {
      */
     public editarTuInformacion() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,11 +25,11 @@ public class editarTuInformacion extends javax.swing.JFrame {
         cajaCorreoEditarTuInformacionEstudianteGui = new javax.swing.JTextField();
         cajaProgramaEditarTuInformacionEstudianteGui = new javax.swing.JTextField();
         botonGuardarEditarEstudianteGui = new javax.swing.JButton();
+        botonCerrarEditarTuInformacionEstudianteGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Edita Tu Informaición");
-        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaApellidosEditarTuInformacionEstudianteGui.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,6 +75,20 @@ public class editarTuInformacion extends javax.swing.JFrame {
         botonGuardarEditarEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonGuardarEditarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 120, 40));
 
+        botonCerrarEditarTuInformacionEstudianteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarEditarTuInformacionEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCerrarEditarTuInformacionEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarEditarTuInformacionEstudianteGui.setText("CERRAR");
+        botonCerrarEditarTuInformacionEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        botonCerrarEditarTuInformacionEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarEditarTuInformacionEstudianteGui.setFocusable(false);
+        botonCerrarEditarTuInformacionEstudianteGui.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCerrarEditarTuInformacionEstudianteGuiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(botonCerrarEditarTuInformacionEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 100, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\editar informacion estudiante imagen.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 400));
@@ -90,6 +99,10 @@ public class editarTuInformacion extends javax.swing.JFrame {
     private void cajaNumeroIdEditarTuInformacionEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNumeroIdEditarTuInformacionEstudianteGuiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNumeroIdEditarTuInformacionEstudianteGuiActionPerformed
+
+    private void botonCerrarEditarTuInformacionEstudianteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarEditarTuInformacionEstudianteGuiMouseClicked
+      
+    }//GEN-LAST:event_botonCerrarEditarTuInformacionEstudianteGuiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -127,6 +140,7 @@ public class editarTuInformacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCerrarEditarTuInformacionEstudianteGui;
     private javax.swing.JButton botonGuardarEditarEstudianteGui;
     private javax.swing.JTextField cajaApellidosEditarTuInformacionEstudianteGui;
     private javax.swing.JTextField cajaCorreoEditarTuInformacionEstudianteGui;
