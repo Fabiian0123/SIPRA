@@ -74,7 +74,6 @@ public class interfazEstudiante extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Interfaz Estudiante");
-        setAlwaysOnTop(true);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -353,12 +352,12 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         if(rutaFotoPerfil != null){
             JOptionPane.showMessageDialog(null, "SE HA GUARDADO CORRECTAMENTE");
-            
         }else{
-            JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO UNA IMAGEN");
+            JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO NINGUNA IMAGEN");
         }
+        
     }//GEN-LAST:event_jButton1MouseClicked
-
+    
     
     
     /**

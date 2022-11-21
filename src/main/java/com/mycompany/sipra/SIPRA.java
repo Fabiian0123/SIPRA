@@ -1,4 +1,3 @@
-
 package com.mycompany.sipra;
 
 import com.unab.sipra.LoguinGui.LoguinSipra;
