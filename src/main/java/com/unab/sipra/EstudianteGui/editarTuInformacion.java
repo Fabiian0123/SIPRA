@@ -68,15 +68,15 @@ public class editarTuInformacion extends javax.swing.JFrame {
 
         botonGuardarEditarEstudianteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonGuardarEditarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonGuardarEditarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarEditarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonGuardarEditarEstudianteGui.setText("GUARDAR");
         botonGuardarEditarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonGuardarEditarEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonGuardarEditarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 120, 40));
 
-        botonCerrarEditarTuInformacionEstudianteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarEditarTuInformacionEstudianteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCerrarEditarTuInformacionEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonCerrarEditarTuInformacionEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarEditarTuInformacionEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonCerrarEditarTuInformacionEstudianteGui.setText("CERRAR");
         botonCerrarEditarTuInformacionEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCerrarEditarTuInformacionEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

@@ -350,19 +350,17 @@ public class interfazEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonSubirFotoMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        if(rutaFotoPerfil != null){
-            JOptionPane.showMessageDialog(null, "SE HA GUARDADO CORRECTAMENTE");
+        if(rutaFotoPerfil == null){
+            JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO LA IMAGEN");
         }else{
-            JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO NINGUNA IMAGEN");
+            JOptionPane.showMessageDialog(null, "SE GUARDO CORRECTAMENTE");
         }
         
     }//GEN-LAST:event_jButton1MouseClicked
     
     
     
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

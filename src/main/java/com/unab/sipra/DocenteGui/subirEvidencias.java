@@ -249,9 +249,9 @@ public class subirEvidencias extends javax.swing.JFrame {
         });
         getContentPane().add(botonSubirFoto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, -1, -1));
 
-        botonGuardarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonGuardarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonGuardarSubirEvidenciasDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonGuardarSubirEvidenciasDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarSubirEvidenciasDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonGuardarSubirEvidenciasDocenteGui.setText("GUARDAR");
         botonGuardarSubirEvidenciasDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarSubirEvidenciasDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -265,7 +265,7 @@ public class subirEvidencias extends javax.swing.JFrame {
 
         botonCancelarSubirEvidenciasDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCancelarSubirEvidenciasDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonCancelarSubirEvidenciasDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCancelarSubirEvidenciasDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonCancelarSubirEvidenciasDocenteGui.setText("CANCELAR");
         botonCancelarSubirEvidenciasDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCancelarSubirEvidenciasDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

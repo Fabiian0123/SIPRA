@@ -100,17 +100,17 @@ public class perfilEstudiante extends javax.swing.JFrame {
 
         getContentPane().add(cajaFotoPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 170, 150));
 
-        botonCerrarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCerrarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonCerrarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonCerrarPerfilEstudianteDocenteGui.setText("CERRAR");
         botonCerrarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCerrarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonCerrarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 90, 30));
 
-        botonEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonEditarPerfilEstudianteDocenteGui.setText("EDITAR");
         botonEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonEditarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

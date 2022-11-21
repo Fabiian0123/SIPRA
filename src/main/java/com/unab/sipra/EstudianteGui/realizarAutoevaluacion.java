@@ -29,20 +29,23 @@ public class realizarAutoevaluacion extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        botonEnviarRealizarAutoevaluacionEstudianteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonEnviarRealizarAutoevaluacionEstudianteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonEnviarRealizarAutoevaluacionEstudianteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonEnviarRealizarAutoevaluacionEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonEnviarRealizarAutoevaluacionEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonEnviarRealizarAutoevaluacionEstudianteGui.setText("ENVIAR");
         botonEnviarRealizarAutoevaluacionEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonEnviarRealizarAutoevaluacionEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEnviarRealizarAutoevaluacionEstudianteGui.setFocusable(false);
         getContentPane().add(botonEnviarRealizarAutoevaluacionEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, 100, 40));
 
-        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setBackground(new java.awt.Color(102, 0, 0));
         jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("CANCELAR");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);

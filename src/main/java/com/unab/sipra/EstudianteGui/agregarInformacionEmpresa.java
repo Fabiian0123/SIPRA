@@ -54,9 +54,9 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
         cajaAreaQuieLaboraAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaAreaQuieLaboraAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 700, -1));
 
-        botonGuardarAggInfoEmpresa.setBackground(new java.awt.Color(153, 0, 0));
+        botonGuardarAggInfoEmpresa.setBackground(new java.awt.Color(102, 0, 0));
         botonGuardarAggInfoEmpresa.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonGuardarAggInfoEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarAggInfoEmpresa.setForeground(new java.awt.Color(0, 0, 0));
         botonGuardarAggInfoEmpresa.setText("GUARDAR");
         botonGuardarAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarAggInfoEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -80,9 +80,9 @@ public class agregarInformacionEmpresa extends javax.swing.JFrame {
         cajaNombreJefeInmediatoAggInfoEmpresa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreJefeInmediatoAggInfoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 680, -1));
 
-        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setBackground(new java.awt.Color(102, 0, 0));
         jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("CANCELAR");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

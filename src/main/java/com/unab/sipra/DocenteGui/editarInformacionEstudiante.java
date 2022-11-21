@@ -78,9 +78,9 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 392, 660, 30));
 
-        botonGuardarEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonGuardarEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonGuardarEditarPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        botonGuardarEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarEditarPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonGuardarEditarPerfilEstudianteDocenteGui.setText("GUARDAR");
         botonGuardarEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarEditarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -91,9 +91,9 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         });
         getContentPane().add(botonGuardarEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 460, 100, 40));
 
-        botonCancelarEditarInformacionEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCancelarEditarInformacionEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCancelarEditarInformacionEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonCancelarEditarInformacionEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCancelarEditarInformacionEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonCancelarEditarInformacionEstudianteDocenteGui.setText("CANCELAR");
         botonCancelarEditarInformacionEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCancelarEditarInformacionEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

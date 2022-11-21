@@ -77,17 +77,17 @@ public class agregarEstudiante extends javax.swing.JFrame {
         cajaNombreJefeAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         getContentPane().add(cajaNombreJefeAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 640, 30));
 
-        botonGuardarAgregarEstudianteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonGuardarAgregarEstudianteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonGuardarAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        botonGuardarAgregarEstudianteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonGuardarAgregarEstudianteGui.setText("GUARDAR");
         botonGuardarAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarAgregarEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonGuardarAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(767, 420, 130, 40));
 
-        botonCerrarAgregarEstudianteDocenteGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarAgregarEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
         botonCerrarAgregarEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonCerrarAgregarEstudianteDocenteGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarAgregarEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         botonCerrarAgregarEstudianteDocenteGui.setText("CERRAR");
         botonCerrarAgregarEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCerrarAgregarEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
