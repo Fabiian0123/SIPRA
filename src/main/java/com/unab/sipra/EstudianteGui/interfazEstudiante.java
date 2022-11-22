@@ -1,5 +1,6 @@
 package com.unab.sipra.EstudianteGui;
 
+import Libpersonal.Libpersonal;
 import com.unab.sipra.controladores.ControladorAgregarInformacionEmpresaEstudianteGui;
 import com.unab.sipra.controladores.ControladorEditarTuInformacion;
 import com.unab.sipra.controladores.ControladorRealizarAutoevaluacionEstudianteGui;
@@ -15,25 +16,19 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-
 public class interfazEstudiante extends javax.swing.JFrame {
+    public static String ruta;
+    private static final FileNameExtensionFilter filter = new FileNameExtensionFilter("PNG/JPG", "PNG,JPG");
 
-    
     public interfazEstudiante() {
         initComponents();
         this.setLocationRelativeTo(null);
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+
     }
 
     /**
@@ -296,13 +291,13 @@ public class interfazEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_cajaNumeroIdInterfazEstudianteActionPerformed
 
     private void botonEditarInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEditarInterfazEstudianteMouseClicked
-       ControladorEditarTuInformacion.inicio();
+        ControladorEditarTuInformacion.inicio();
     }//GEN-LAST:event_botonEditarInterfazEstudianteMouseClicked
 
     private void botonCerrarSesionInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazEstudianteMouseClicked
-       int b = JOptionPane.YES_NO_OPTION;
-        int mues = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",b);
-        if(mues == 0){
+        int b = JOptionPane.YES_NO_OPTION;
+        int mues = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?", "CERRAR SESIÓN", b);
+        if (mues == 0) {
             System.exit(0);
     }//GEN-LAST:event_botonCerrarSesionInterfazEstudianteMouseClicked
     }
@@ -315,13 +310,13 @@ public class interfazEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAgregarInformacionEmpresaInterfazDocenteMouseClicked
 
     private void botonAdjuntaPpaInterfazEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAdjuntaPpaInterfazEstudianteActionPerformed
-       JFileChooser jf = new JFileChooser();
-       jf.showOpenDialog(this);
-       File rutaPpa = jf.getSelectedFile();
-       if(rutaPpa != null){
-           //rutaPpa.setText(rutaPpa.getAbsolutePath());
-           this.rutaPpa.setText(rutaPpa.getAbsolutePath());
-       }
+        JFileChooser jf = new JFileChooser();
+        jf.showOpenDialog(this);
+        File rutaPpa = jf.getSelectedFile();
+        if (rutaPpa != null) {
+            //rutaPpa.setText(rutaPpa.getAbsolutePath());
+            this.rutaPpa.setText(rutaPpa.getAbsolutePath());
+        }
     }//GEN-LAST:event_botonAdjuntaPpaInterfazEstudianteActionPerformed
 
     private void botonEvaluacionFinalInterfazEstudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEvaluacionFinalInterfazEstudianteMouseClicked
@@ -333,34 +328,34 @@ public class interfazEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonMinimizarInterfzEstudianteGuiMouseClicked
 
     private void botonSubirFotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFotoMouseClicked
-        String ruta = "";
+        
         JFileChooser jFileChooser = new JFileChooser();
-        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG" ,"PNG");
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
         jFileChooser.setFileFilter(filtrado);
-        
+
         int respuesta = jFileChooser.showOpenDialog(this);
-        
-        if(respuesta == jFileChooser.APPROVE_OPTION){
+
+        if (respuesta == jFileChooser.APPROVE_OPTION) {
             ruta = jFileChooser.getSelectedFile().getAbsolutePath();
+            System.err.println(ruta);
             Image mImagen = new ImageIcon(ruta).getImage();
             ImageIcon mIcon = new ImageIcon(mImagen.getScaledInstance(rutaFotoPerfil.getWidth(), rutaFotoPerfil.getHeight(), Image.SCALE_SMOOTH));
             rutaFotoPerfil.setIcon(mIcon);
-             
         }
     }//GEN-LAST:event_botonSubirFotoMouseClicked
 
+    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        if(rutaFotoPerfil == null){
+         if (ruta==null) {
+            System.err.println(ruta);
+
             JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO LA IMAGEN");
-        }else{
+        } else {
+            System.err.print(ruta);
             JOptionPane.showMessageDialog(null, "SE GUARDO CORRECTAMENTE");
         }
-        
     }//GEN-LAST:event_jButton1MouseClicked
-    
-    
-    
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
