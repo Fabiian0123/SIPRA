@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 public class subirEvidencias extends javax.swing.JFrame {
@@ -289,6 +290,7 @@ public class subirEvidencias extends javax.swing.JFrame {
 
     private void botonSubirFoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSubirFoto1ActionPerformed
         JFileChooser ab= new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
        ab.showOpenDialog(this);
        File rutaFotoUno = ab.getSelectedFile();
        if(rutaFotoUno != null){

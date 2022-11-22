@@ -1,6 +1,6 @@
 package com.unab.sipra.EstudianteGui;
 
-import Libpersonal.Libpersonal;
+import Librerias.Libpersonal;
 import com.unab.sipra.controladores.ControladorAgregarInformacionEmpresaEstudianteGui;
 import com.unab.sipra.controladores.ControladorEditarTuInformacion;
 import com.unab.sipra.controladores.ControladorRealizarAutoevaluacionEstudianteGui;
@@ -264,6 +264,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
                 botonSubirFotoMouseClicked(evt);
             }
         });
+        botonSubirFoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSubirFotoActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonSubirFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 110, -1));
 
         jButton1.setBackground(new java.awt.Color(153, 0, 0));
@@ -355,6 +360,10 @@ public class interfazEstudiante extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "SE GUARDO CORRECTAMENTE");
         }
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void botonSubirFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSubirFotoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonSubirFotoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
