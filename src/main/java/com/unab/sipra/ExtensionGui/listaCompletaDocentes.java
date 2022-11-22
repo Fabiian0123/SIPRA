@@ -44,7 +44,7 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
                 botonCancelarListDocentesEntensionGuiMouseClicked(evt);
             }
         });
-        getContentPane().add(botonCancelarListDocentesEntensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 90, 30));
+        getContentPane().add(botonCancelarListDocentesEntensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 90, 20));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -93,15 +93,14 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
         );
         cajaListaDocentesExtensionGuiLayout.setVerticalGroup(
             cajaListaDocentesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cajaListaDocentesExtensionGuiLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(cajaListaDocentesExtensionGuiLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(cajaListaDocentesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 870, 300));
+        getContentPane().add(cajaListaDocentesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 870, 330));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen lista de docentes rol extension seguimiento docente.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\lista completa de docentes.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
 

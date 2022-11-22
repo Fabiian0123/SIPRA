@@ -1,4 +1,3 @@
-
 package com.unab.sipra.DocenteGui;
 
 import java.io.File;
@@ -9,25 +8,23 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-
 public class subirEvidencias extends javax.swing.JFrame {
 
-    
     public subirEvidencias() {
         initComponents();
         this.setLocationRelativeTo(null);
         try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (InstantiationException ex) {
-                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IllegalAccessException ex) {
-                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (UnsupportedLookAndFeelException ex) {
-                    Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
-                }
-        
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(subirEvidencias.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     /**
@@ -285,66 +282,79 @@ public class subirEvidencias extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCancelarSubirEvidenciasDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarSubirEvidenciasDocenteGuiMouseClicked
-    this.dispose();
+        this.dispose();
     }//GEN-LAST:event_botonCancelarSubirEvidenciasDocenteGuiMouseClicked
 
     private void botonSubirFoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSubirFoto1ActionPerformed
-        JFileChooser ab= new JFileChooser();
+        JFileChooser ab = new JFileChooser();
         FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
-       ab.showOpenDialog(this);
-       File rutaFotoUno = ab.getSelectedFile();
-       if(rutaFotoUno != null){
-         this.rutaFotoUno.setText(rutaFotoUno.getAbsolutePath());
+        ab.setFileFilter(filtrado);
+
+        ab.showOpenDialog(this);
+        File rutaFotoUno = ab.getSelectedFile();
+        if (rutaFotoUno != null) {
+            this.rutaFotoUno.setText(rutaFotoUno.getAbsolutePath());
     }//GEN-LAST:event_botonSubirFoto1ActionPerformed
     }
     private void botonSubirFoto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto2MouseClicked
         JFileChooser cd = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
+        cd.setFileFilter(filtrado);
+
         cd.showOpenDialog(this);
         File rutaFotoDos = cd.getSelectedFile();
-        if (rutaFotoDos != null){
+        if (rutaFotoDos != null) {
             this.rutaFotoDos.setText(rutaFotoDos.getAbsolutePath());
         }
     }//GEN-LAST:event_botonSubirFoto2MouseClicked
 
     private void botonSubirFoto3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto3MouseClicked
         JFileChooser ab = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
+        ab.setFileFilter(filtrado);
         ab.showOpenDialog(this);
         File rutaFotoTres = ab.getSelectedFile();
-        if(rutaFotoTres !=null){
+        if (rutaFotoTres != null) {
             this.rutaFotoTres.setText(rutaFotoTres.getAbsolutePath());
         }
     }//GEN-LAST:event_botonSubirFoto3MouseClicked
 
     private void botonSubirFoto4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto4MouseClicked
         JFileChooser ax = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
+        ax.setFileFilter(filtrado);
+
         ax.showOpenDialog(this);
         File rutaFotoCuatro = ax.getSelectedFile();
-        if(rutaFotoCuatro != null){
+        if (rutaFotoCuatro != null) {
             this.rutaFotoCuatro.setText(rutaFotoCuatro.getAbsolutePath());
         }
     }//GEN-LAST:event_botonSubirFoto4MouseClicked
 
     private void botonSubirFoto5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto5MouseClicked
         JFileChooser pa = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
+        pa.setFileFilter(filtrado);
+
         pa.showOpenDialog(this);
         File rutaFotoCinco = pa.getSelectedFile();
-        if (rutaFotoCinco != null){
+        if (rutaFotoCinco != null) {
             this.rutaFotoCinco.setText(rutaFotoCinco.getAbsolutePath());
         }
     }//GEN-LAST:event_botonSubirFoto5MouseClicked
 
     private void botonSubirFoto6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSubirFoto6MouseClicked
         JFileChooser ma = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("JPG, PNG", "JPG", "PNG");
+        ma.setFileFilter(filtrado);
+
         ma.showOpenDialog(this);
         File rutaFotoSeis = ma.getSelectedFile();
-        if(rutaFotoSeis != null){
+        if (rutaFotoSeis != null) {
             this.rutaFotoSeis.setText(rutaFotoSeis.getAbsolutePath());
         }
     }//GEN-LAST:event_botonSubirFoto6MouseClicked
-    
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -372,7 +382,7 @@ public class subirEvidencias extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
                 new subirEvidencias().setVisible(true);
             }
         });

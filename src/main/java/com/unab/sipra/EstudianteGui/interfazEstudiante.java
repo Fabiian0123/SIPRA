@@ -316,6 +316,8 @@ public class interfazEstudiante extends javax.swing.JFrame {
 
     private void botonAdjuntaPpaInterfazEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAdjuntaPpaInterfazEstudianteActionPerformed
         JFileChooser jf = new JFileChooser();
+        FileNameExtensionFilter filtrado = new FileNameExtensionFilter("PDF,DOCS,XLSX", "PDF", "DOCS","XLSX");
+        jf.setFileFilter(filtrado);
         jf.showOpenDialog(this);
         File rutaPpa = jf.getSelectedFile();
         if (rutaPpa != null) {

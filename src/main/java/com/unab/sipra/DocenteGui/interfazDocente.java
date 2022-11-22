@@ -33,7 +33,7 @@ public class interfazDocente extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaInterfazDocente = new javax.swing.JTable();
         botonAggEstudianteInterfazDocente = new javax.swing.JButton();
         botonCerrarSesionInterfazDocente = new javax.swing.JButton();
         botonEliminarInterfazDocente = new javax.swing.JButton();
@@ -57,37 +57,32 @@ public class interfazDocente extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jTable1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaInterfazDocente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        tablaInterfazDocente.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        tablaInterfazDocente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Apellidos", "Numero Id", "Correo", "Programa", "Nombre Empresa", "Jefe Inmediato", "Avance"
             }
-        ));
-        jScrollPane2.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablaInterfazDocente);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -127,6 +122,11 @@ public class interfazDocente extends javax.swing.JFrame {
         botonAggEstudianteInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonAggEstudianteInterfazDocenteMouseClicked(evt);
+            }
+        });
+        botonAggEstudianteInterfazDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAggEstudianteInterfazDocenteActionPerformed(evt);
             }
         });
         getContentPane().add(botonAggEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, -1, 40));
@@ -295,6 +295,10 @@ public class interfazDocente extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "NO SE HA SELECCIONADO UN ESTUDIANTE");
     }//GEN-LAST:event_botonEliminarInterfazDocenteMouseClicked
 
+    private void botonAggEstudianteInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAggEstudianteInterfazDocenteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAggEstudianteInterfazDocenteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -362,7 +366,7 @@ public class interfazDocente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel panelBuscadorInterfazDocenteGui;
+    private javax.swing.JTable tablaInterfazDocente;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,7 +21,6 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         cajaListaEstudiantesExtensionGui = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
-        cajaListadeDocentes = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -44,7 +43,7 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
                 botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked(evt);
             }
         });
-        getContentPane().add(botonCerrarListaCompletaEstudianteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 80, 30));
+        getContentPane().add(botonCerrarListaCompletaEstudianteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 80, 30));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -69,18 +68,14 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.PREFERRED_SIZE, 952, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1344, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cajaListadeDocentes, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(153, 153, 153))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 94, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel3);
@@ -89,20 +84,18 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         cajaListaEstudiantesExtensionGui.setLayout(cajaListaEstudiantesExtensionGuiLayout);
         cajaListaEstudiantesExtensionGuiLayout.setHorizontalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 870, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
         );
         cajaListaEstudiantesExtensionGuiLayout.setVerticalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cajaListaEstudiantesExtensionGuiLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
         );
 
-        getContentPane().add(cajaListaEstudiantesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 870, 300));
+        getContentPane().add(cajaListaEstudiantesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 890, 370));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\imagen lista de estudiantes rol extension seguimiento estudiante.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\fondo lista de estudiantes seguimineto al estudiante interfaz extension.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 460));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,7 +142,6 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCerrarListaCompletaEstudianteExtensionGui;
     private javax.swing.JPanel cajaListaEstudiantesExtensionGui;
-    private javax.swing.JLabel cajaListadeDocentes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;

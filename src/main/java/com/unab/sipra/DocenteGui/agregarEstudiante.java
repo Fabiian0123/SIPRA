@@ -1,12 +1,12 @@
-
 package com.unab.sipra.DocenteGui;
+
+import java.util.HashSet;
+import java.util.Set;
+import javax.swing.table.DefaultTableModel;
 
 
 public class agregarEstudiante extends javax.swing.JFrame {
-
-    /**
-     * Creates new form agregarEstudiante
-     */
+    
     public agregarEstudiante() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -83,6 +83,11 @@ public class agregarEstudiante extends javax.swing.JFrame {
         botonGuardarAgregarEstudianteGui.setText("GUARDAR");
         botonGuardarAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonGuardarAgregarEstudianteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonGuardarAgregarEstudianteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarAgregarEstudianteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonGuardarAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(767, 420, 130, 40));
 
         botonCerrarAgregarEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
@@ -113,6 +118,10 @@ public class agregarEstudiante extends javax.swing.JFrame {
     private void botonCerrarAgregarEstudianteDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
         this.dispose();
     }//GEN-LAST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
+
+    private void botonGuardarAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarAgregarEstudianteGuiActionPerformed
+       
+    }//GEN-LAST:event_botonGuardarAgregarEstudianteGuiActionPerformed
 
     /**
      * @param args the command line arguments
