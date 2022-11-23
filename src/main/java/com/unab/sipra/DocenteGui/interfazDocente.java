@@ -367,6 +367,6 @@ public class interfazDocente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel panelBuscadorInterfazDocenteGui;
-    private javax.swing.JTable tablaInterfazDocente;
+    public javax.swing.JTable tablaInterfazDocente;
     // End of variables declaration//GEN-END:variables
 }
