@@ -120,7 +120,9 @@ public class agregarEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
 
     private void botonGuardarAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarAgregarEstudianteGuiActionPerformed
-       
+        DefaultTableModel model = (DefaultTableModel) interfazDocente.tablaInterfazDocente.getModel(); 
+        model.addRow(new Object[]{ "1", "2", "3", "4", "5", "6", "7", "8" });
+        this.dispose();
     }//GEN-LAST:event_botonGuardarAgregarEstudianteGuiActionPerformed
 
     /**
