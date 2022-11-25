@@ -68,7 +68,7 @@ public class interfazDocente extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false, false, false
@@ -83,6 +83,16 @@ public class interfazDocente extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tablaInterfazDocente);
+        if (tablaInterfazDocente.getColumnModel().getColumnCount() > 0) {
+            tablaInterfazDocente.getColumnModel().getColumn(0).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(1).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(2).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(3).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(4).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(5).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(6).setResizable(false);
+            tablaInterfazDocente.getColumnModel().getColumn(7).setResizable(false);
+        }
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

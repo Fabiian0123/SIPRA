@@ -75,6 +75,11 @@ public class agregarEstudiante extends javax.swing.JFrame {
         cajaNombreJefeAgregarEstudianteGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         cajaNombreJefeAgregarEstudianteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreJefeAgregarEstudianteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
+        cajaNombreJefeAgregarEstudianteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJefeAgregarEstudianteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(cajaNombreJefeAgregarEstudianteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 640, 30));
 
         botonGuardarAgregarEstudianteGui.setBackground(new java.awt.Color(102, 0, 0));
@@ -120,10 +125,23 @@ public class agregarEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
 
     private void botonGuardarAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarAgregarEstudianteGuiActionPerformed
+        Object[] mo = new Object[8];
         DefaultTableModel model = (DefaultTableModel) interfazDocente.tablaInterfazDocente.getModel(); 
-        model.addRow(new Object[]{ "1", "2", "3", "4", "5", "6", "7", "8" });
+        mo[0]=cajaNombresAgregarEstudianteDocenteGui.getText();
+        mo[1]=cajaApellidosAgregarEstudianteGui.getText();
+        mo[2]=cajaNumeroIdentidadAgregarEstudianteGui.getText();
+        mo[3]=cajaCorreoAgregarEstudianteGui.getText();
+        mo[4]=cajaProgramaAgregarEstudianteGui.getText();
+        mo[5]=cajaNombreEmpresaAgregarEstudianteGui.getText();
+        mo[6]=cajaNombreJefeAgregarEstudianteGui.getText();
+        model.addRow(mo);
+//model.addRow(new Object[]{1, 2, 3, 4, 5, 6, 7, 8});
         this.dispose();
     }//GEN-LAST:event_botonGuardarAgregarEstudianteGuiActionPerformed
+
+    private void cajaNombreJefeAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJefeAgregarEstudianteGuiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJefeAgregarEstudianteGuiActionPerformed
 
     /**
      * @param args the command line arguments
