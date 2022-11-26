@@ -193,7 +193,7 @@ public class perfilEstudiante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar barraProgresoEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JProgressBar barraProgresoEditarPerfilEstudianteDocenteGui;
     private javax.swing.JButton botonCerrarPerfilEstudianteDocenteGui;
     private javax.swing.JButton botonEditarPerfilEstudianteDocenteGui;
     private javax.swing.JTextArea cajaActividadesEstdiantePerfilEstudianteDocenteGui;

@@ -12,6 +12,7 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
+        setVisible(true);
         
        
     }

@@ -1,7 +1,11 @@
 package com.unab.sipra.DocenteGui;
 
+import static com.unab.sipra.DocenteGui.interfazDocente.tablaInterfazDocente;
+import static com.unab.sipra.DocenteGui.perfilEstudiante.barraProgresoEditarPerfilEstudianteDocenteGui;
+import java.awt.Point;
 import java.util.HashSet;
 import java.util.Set;
+import javax.swing.JProgressBar;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -134,8 +138,9 @@ public class agregarEstudiante extends javax.swing.JFrame {
         mo[4]=cajaProgramaAgregarEstudianteGui.getText();
         mo[5]=cajaNombreEmpresaAgregarEstudianteGui.getText();
         mo[6]=cajaNombreJefeAgregarEstudianteGui.getText();
+        mo[7]="";
+
         model.addRow(mo);
-//model.addRow(new Object[]{1, 2, 3, 4, 5, 6, 7, 8});
         this.dispose();
     }//GEN-LAST:event_botonGuardarAgregarEstudianteGuiActionPerformed
 
