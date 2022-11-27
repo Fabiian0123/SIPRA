@@ -43,7 +43,6 @@ public final class LoguinSipra extends javax.swing.JFrame {
         botonCerrar = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loguin Sipra");
         setIconImage(getIconImage());
         setUndecorated(true);

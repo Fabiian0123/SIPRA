@@ -28,7 +28,7 @@ public class interfazEstudiante extends javax.swing.JFrame {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(interfazEstudiante.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }
 
     /**
@@ -71,6 +71,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
         setTitle("Interfaz Estudiante");
         setUndecorated(true);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -106,37 +111,47 @@ public class interfazEstudiante extends javax.swing.JFrame {
         cajaNombresInterfazEstudiante.setEditable(false);
         cajaNombresInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cajaNombresInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaNombresInterfazEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombresInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        getContentPane().add(cajaNombresInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 220, -1));
+        getContentPane().add(cajaNombresInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 230, 30));
 
         cajaApellidosInterfazEstudiante.setEditable(false);
         cajaApellidosInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cajaApellidosInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaApellidosInterfazEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         cajaApellidosInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        getContentPane().add(cajaApellidosInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 220, -1));
+        getContentPane().add(cajaApellidosInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 230, 30));
 
         cajaNumeroIdInterfazEstudiante.setEditable(false);
         cajaNumeroIdInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cajaNumeroIdInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaNumeroIdInterfazEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         cajaNumeroIdInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         cajaNumeroIdInterfazEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaNumeroIdInterfazEstudianteActionPerformed(evt);
             }
         });
-        getContentPane().add(cajaNumeroIdInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 140, -1));
+        getContentPane().add(cajaNumeroIdInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 150, 20));
 
         cajaCorreoInterfazEstudiante.setEditable(false);
         cajaCorreoInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cajaCorreoInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaCorreoInterfazEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         cajaCorreoInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        getContentPane().add(cajaCorreoInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 230, -1));
+        cajaCorreoInterfazEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaCorreoInterfazEstudianteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cajaCorreoInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 230, 20));
 
         cajaProgramaInterfazEstudiante.setEditable(false);
         cajaProgramaInterfazEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cajaProgramaInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cajaProgramaInterfazEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         cajaProgramaInterfazEstudiante.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        getContentPane().add(cajaProgramaInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 210, -1));
+        getContentPane().add(cajaProgramaInterfazEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, 210, 20));
 
         botonEditarInterfazEstudiante.setBackground(new java.awt.Color(153, 0, 0));
         botonEditarInterfazEstudiante.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -366,6 +381,15 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private void botonSubirFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSubirFotoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonSubirFotoActionPerformed
+    
+   
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+      
+    }//GEN-LAST:event_formWindowActivated
+
+    private void cajaCorreoInterfazEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCorreoInterfazEstudianteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaCorreoInterfazEstudianteActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -409,11 +433,11 @@ public class interfazEstudiante extends javax.swing.JFrame {
     private javax.swing.JLabel botonMinimizarInterfzEstudianteGui;
     private javax.swing.JButton botonRealizaAutoevaluacionInterfazEstudiante;
     private javax.swing.JButton botonSubirFoto;
-    private javax.swing.JTextField cajaApellidosInterfazEstudiante;
-    private javax.swing.JTextField cajaCorreoInterfazEstudiante;
-    private javax.swing.JTextField cajaNombresInterfazEstudiante;
-    private javax.swing.JTextField cajaNumeroIdInterfazEstudiante;
-    private javax.swing.JTextField cajaProgramaInterfazEstudiante;
+    public static javax.swing.JTextField cajaApellidosInterfazEstudiante;
+    public static javax.swing.JTextField cajaCorreoInterfazEstudiante;
+    public static javax.swing.JTextField cajaNombresInterfazEstudiante;
+    public static javax.swing.JTextField cajaNumeroIdInterfazEstudiante;
+    public static javax.swing.JTextField cajaProgramaInterfazEstudiante;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

@@ -2,6 +2,7 @@ package com.unab.sipra.DocenteGui;
 
 import static com.unab.sipra.DocenteGui.interfazDocente.tablaInterfazDocente;
 import static com.unab.sipra.DocenteGui.perfilEstudiante.barraProgresoEditarPerfilEstudianteDocenteGui;
+import com.unab.sipra.ExtensionGui.listaCompletaEstudiantes;
 import java.awt.Point;
 import java.util.HashSet;
 import java.util.Set;
