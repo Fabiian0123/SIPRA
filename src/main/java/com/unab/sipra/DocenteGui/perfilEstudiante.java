@@ -4,6 +4,8 @@
  */
 package com.unab.sipra.DocenteGui;
 
+import com.unab.sipra.controladores.ControladorEditarInforEstudianteInterfazDocente;
+
 /**
  *
  * @author fabia
@@ -15,6 +17,7 @@ public class perfilEstudiante extends javax.swing.JFrame {
      */
     public perfilEstudiante() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -42,8 +45,9 @@ public class perfilEstudiante extends javax.swing.JFrame {
         cajaActividadesEstdiantePerfilEstudianteDocenteGui = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Perfil Del Estudiante");
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -106,6 +110,11 @@ public class perfilEstudiante extends javax.swing.JFrame {
         botonCerrarPerfilEstudianteDocenteGui.setText("CERRAR");
         botonCerrarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCerrarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCerrarPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonCerrarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 90, 30));
 
         botonEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
@@ -114,6 +123,11 @@ public class perfilEstudiante extends javax.swing.JFrame {
         botonEditarPerfilEstudianteDocenteGui.setText("EDITAR");
         botonEditarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonEditarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonEditarPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEditarPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 100, 30));
 
         barraProgresoEditarPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
@@ -156,6 +170,14 @@ public class perfilEstudiante extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonCerrarPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarPerfilEstudianteDocenteGuiActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_botonCerrarPerfilEstudianteDocenteGuiActionPerformed
+
+    private void botonEditarPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarPerfilEstudianteDocenteGuiActionPerformed
+        ControladorEditarInforEstudianteInterfazDocente.inicio();
+    }//GEN-LAST:event_botonEditarPerfilEstudianteDocenteGuiActionPerformed
 
     /**
      * @param args the command line arguments

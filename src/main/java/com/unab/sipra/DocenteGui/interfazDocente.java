@@ -4,12 +4,14 @@ import com.unab.sipra.controladores.ControladorAgregarEstudianteDocenteGui;
 import com.unab.sipra.controladores.ControladorEditarInforEstudianteInterfazDocente;
 
 import com.unab.sipra.controladores.ControladorInterfazDocente;
+import com.unab.sipra.controladores.ControladorPerfilEstudianteDocenteGui;
 import com.unab.sipra.controladores.ControladorSubirEvidenciasDocenteGui;
 import java.awt.Frame;
 import java.time.Clock;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 
 public class interfazDocente extends javax.swing.JFrame {
@@ -40,7 +42,6 @@ public class interfazDocente extends javax.swing.JFrame {
         botonCerrarSesionInterfazDocente = new javax.swing.JButton();
         botonEliminarInterfazDocente = new javax.swing.JButton();
         botonBuscarInterfazDocente = new javax.swing.JButton();
-        botonEditarInformacionEstudianteInterfazDocente = new javax.swing.JButton();
         botonSubirEvidenciasInterfazDocente = new javax.swing.JButton();
         botonMinimizarInterfazDocente = new javax.swing.JLabel();
         panelBuscadorInterfazDocenteGui = new javax.swing.JPanel();
@@ -86,6 +87,11 @@ public class interfazDocente extends javax.swing.JFrame {
         });
         tablaInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tablaInterfazDocente.setRowHeight(30);
+        tablaInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaInterfazDocenteMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tablaInterfazDocente);
         if (tablaInterfazDocente.getColumnModel().getColumnCount() > 0) {
             tablaInterfazDocente.getColumnModel().getColumn(0).setResizable(false);
@@ -150,7 +156,7 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonAggEstudianteInterfazDocenteActionPerformed(evt);
             }
         });
-        getContentPane().add(botonAggEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, -1, 40));
+        getContentPane().add(botonAggEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, 40));
 
         botonCerrarSesionInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\cerrar-sesion.png")); // NOI18N
         botonCerrarSesionInterfazDocente.setBorder(null);
@@ -166,7 +172,7 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonCerrarSesionInterfazDocenteActionPerformed(evt);
             }
         });
-        getContentPane().add(botonCerrarSesionInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 40, -1));
+        getContentPane().add(botonCerrarSesionInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 50, 40, -1));
 
         botonEliminarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\borrar.png")); // NOI18N
         botonEliminarInterfazDocente.setBorder(null);
@@ -177,7 +183,12 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonEliminarInterfazDocenteMouseClicked(evt);
             }
         });
-        getContentPane().add(botonEliminarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 30, 30));
+        botonEliminarInterfazDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarInterfazDocenteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonEliminarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 30, 30));
 
         botonBuscarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\buscar.png")); // NOI18N
         botonBuscarInterfazDocente.setBorder(null);
@@ -188,23 +199,7 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonBuscarInterfazDocenteMouseClicked(evt);
             }
         });
-        getContentPane().add(botonBuscarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, 30));
-
-        botonEditarInformacionEstudianteInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\editar.png")); // NOI18N
-        botonEditarInformacionEstudianteInterfazDocente.setBorder(null);
-        botonEditarInformacionEstudianteInterfazDocente.setContentAreaFilled(false);
-        botonEditarInformacionEstudianteInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonEditarInformacionEstudianteInterfazDocente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonEditarInformacionEstudianteInterfazDocenteMouseClicked(evt);
-            }
-        });
-        botonEditarInformacionEstudianteInterfazDocente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEditarInformacionEstudianteInterfazDocenteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonEditarInformacionEstudianteInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 50, -1, 40));
+        getContentPane().add(botonBuscarInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, -1, 30));
 
         botonSubirEvidenciasInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\subir (2).png")); // NOI18N
         botonSubirEvidenciasInterfazDocente.setBorder(null);
@@ -215,7 +210,7 @@ public class interfazDocente extends javax.swing.JFrame {
                 botonSubirEvidenciasInterfazDocenteMouseClicked(evt);
             }
         });
-        getContentPane().add(botonSubirEvidenciasInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, 30));
+        getContentPane().add(botonSubirEvidenciasInterfazDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 50, -1, 30));
 
         botonMinimizarInterfazDocente.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\minimizar (2).png")); // NOI18N
         botonMinimizarInterfazDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -266,11 +261,7 @@ public class interfazDocente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botonEditarInformacionEstudianteInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
-        ControladorInterfazDocente.btn_editarInfo();
-    }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteActionPerformed
-
+   
     private void botonCerrarSesionInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarSesionInterfazDocenteMouseClicked
         int a = JOptionPane.YES_NO_OPTION;
         int muestra = JOptionPane.showConfirmDialog(this, "¿ESTA SEGURO QUE DESEA SALIR?","CERRAR SESIÓN",a);
@@ -278,10 +269,6 @@ public class interfazDocente extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_botonCerrarSesionInterfazDocenteMouseClicked
-
-    private void botonEditarInformacionEstudianteInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
-        
-    }//GEN-LAST:event_botonEditarInformacionEstudianteInterfazDocenteMouseClicked
 
     private void botonMinimizarInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfazDocenteMouseClicked
        this.setState(interfazDocente.ICONIFIED);
@@ -320,6 +307,24 @@ public class interfazDocente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonAggEstudianteInterfazDocenteActionPerformed
 
+    private void tablaInterfazDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaInterfazDocenteMouseClicked
+        if (evt.getClickCount()== 2){
+            ControladorPerfilEstudianteDocenteGui.inicio();
+        }
+    }//GEN-LAST:event_tablaInterfazDocenteMouseClicked
+
+    private void botonEliminarInterfazDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarInterfazDocenteActionPerformed
+      if (tablaInterfazDocente.getSelectedRow()>=0){
+          DefaultTableModel tm = (DefaultTableModel)tablaInterfazDocente.getModel();
+          int r = JOptionPane.showConfirmDialog(this, "¿ESTAS SEGURO QUE QUIERES ELIMINAR ESTE REGISTRO?","SISTEMA",JOptionPane.INFORMATION_MESSAGE);
+          if(r==JOptionPane.YES_OPTION){
+              tm.removeRow(tablaInterfazDocente.getSelectedRow());
+          }
+      }else{
+          JOptionPane.showMessageDialog(this, "NO HAZ SELECCIONADO UN REGITRO");
+   
+    }//GEN-LAST:event_botonEliminarInterfazDocenteActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
@@ -377,7 +382,6 @@ public class interfazDocente extends javax.swing.JFrame {
     private javax.swing.JButton botonBuscarBuscadorInterfazDocenteGui;
     private javax.swing.JButton botonBuscarInterfazDocente;
     private javax.swing.JButton botonCerrarSesionInterfazDocente;
-    private javax.swing.JButton botonEditarInformacionEstudianteInterfazDocente;
     private javax.swing.JButton botonEliminarInterfazDocente;
     private javax.swing.JLabel botonMinimizarInterfazDocente;
     private javax.swing.JButton botonSubirEvidenciasInterfazDocente;

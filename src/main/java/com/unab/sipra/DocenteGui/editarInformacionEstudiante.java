@@ -90,6 +90,11 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
                 botonGuardarEditarPerfilEstudianteDocenteGuiMouseClicked(evt);
             }
         });
+        botonGuardarEditarPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonGuardarEditarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 460, 100, 40));
 
         botonCancelarEditarInformacionEstudianteDocenteGui.setBackground(new java.awt.Color(102, 0, 0));
@@ -101,6 +106,11 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
         botonCancelarEditarInformacionEstudianteDocenteGui.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked(evt);
+            }
+        });
+        botonCancelarEditarInformacionEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarEditarInformacionEstudianteDocenteGuiActionPerformed(evt);
             }
         });
         getContentPane().add(botonCancelarEditarInformacionEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 110, 40));
@@ -123,6 +133,14 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
     private void botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked
         this.dispose();
     }//GEN-LAST:event_botonCancelarEditarInformacionEstudianteDocenteGuiMouseClicked
+
+    private void botonCancelarEditarInformacionEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarEditarInformacionEstudianteDocenteGuiActionPerformed
+       
+    }//GEN-LAST:event_botonCancelarEditarInformacionEstudianteDocenteGuiActionPerformed
+
+    private void botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed
 
     /**
      * @param args the command line arguments
