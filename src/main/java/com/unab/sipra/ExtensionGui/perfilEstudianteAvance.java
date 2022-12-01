@@ -49,9 +49,10 @@ public class perfilEstudianteAvance extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil Del Estudiante");
         setAlwaysOnTop(true);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaNombreApellidoPerfilEstudianteExtensionGui.setEditable(false);
@@ -112,6 +113,11 @@ public class perfilEstudianteAvance extends javax.swing.JFrame {
         botonCerrarPerfilEstudianteDocenteGui.setText("CERRAR");
         botonCerrarPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         botonCerrarPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCerrarPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonCerrarPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 90, 30));
 
         barraProgresoPerfilEstudianteExtensionGui.setBackground(new java.awt.Color(255, 255, 255));
@@ -167,6 +173,10 @@ public class perfilEstudianteAvance extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonCerrarPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarPerfilEstudianteDocenteGuiActionPerformed
+        dispose();
+    }//GEN-LAST:event_botonCerrarPerfilEstudianteDocenteGuiActionPerformed
 
     /**
      * @param args the command line arguments

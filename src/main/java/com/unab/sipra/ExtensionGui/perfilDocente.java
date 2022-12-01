@@ -4,6 +4,9 @@
  */
 package com.unab.sipra.ExtensionGui;
 
+import com.unab.sipra.controladores.ControladorEvidenciasDocenteExtensionGui;
+import com.unab.sipra.controladores.ControladorListaEstudiantesCargoDocente;
+
 /**
  *
  * @author fabia
@@ -102,6 +105,11 @@ public class perfilDocente extends javax.swing.JFrame {
         botonVerEvidenciasDocentePerfilDocenteExtensionGui.setText("VER EVIDENCIAS DEL DOCENTE");
         botonVerEvidenciasDocentePerfilDocenteExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonVerEvidenciasDocentePerfilDocenteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonVerEvidenciasDocentePerfilDocenteExtensionGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVerEvidenciasDocentePerfilDocenteExtensionGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonVerEvidenciasDocentePerfilDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 280, 50));
 
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.setBackground(new java.awt.Color(153, 0, 0));
@@ -110,6 +118,11 @@ public class perfilDocente extends javax.swing.JFrame {
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.setText("LISTA DE ESTUDIANTES A CARGO ");
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonListaDeEstudiantesAcargoPerfilDocenteExtensionGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 260, 50));
 
         botonCerrarPerfilDocenteExtensionGui.setBackground(new java.awt.Color(153, 0, 0));
@@ -135,6 +148,14 @@ public class perfilDocente extends javax.swing.JFrame {
     private void botonCerrarPerfilDocenteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarPerfilDocenteExtensionGuiActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCerrarPerfilDocenteExtensionGuiActionPerformed
+
+    private void botonListaDeEstudiantesAcargoPerfilDocenteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListaDeEstudiantesAcargoPerfilDocenteExtensionGuiActionPerformed
+        ControladorListaEstudiantesCargoDocente.inicio();
+    }//GEN-LAST:event_botonListaDeEstudiantesAcargoPerfilDocenteExtensionGuiActionPerformed
+
+    private void botonVerEvidenciasDocentePerfilDocenteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerEvidenciasDocentePerfilDocenteExtensionGuiActionPerformed
+        ControladorEvidenciasDocenteExtensionGui.inicio();
+    }//GEN-LAST:event_botonVerEvidenciasDocentePerfilDocenteExtensionGuiActionPerformed
 
     /**
      * @param args the command line arguments

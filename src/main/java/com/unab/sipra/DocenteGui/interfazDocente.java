@@ -290,7 +290,7 @@ public class interfazDocente extends javax.swing.JFrame {
        
         int cou = 0;
         if(evt.getClickCount() == 1 && cou == 0 ){
-             //ControladorInterfazDocente.btn_Mostrar();
+             
             panelBuscadorInterfazDocenteGui.setVisible(true);
             cou++;
         }else{

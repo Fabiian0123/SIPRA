@@ -1,13 +1,19 @@
 
 package com.unab.sipra.ExtensionGui;
 
+import com.unab.sipra.controladores.ControladorPerfilEstudianteAvance;
+import com.unab.sipra.controladores.ControladorPerfilEstudianteDocenteGui;
+import javax.swing.table.DefaultTableModel;
+
 
 public class listaCompletaEstudiantes extends javax.swing.JFrame {
+    DefaultTableModel mod;
 
   
     public listaCompletaEstudiantes() {
         initComponents();
         this.setLocationRelativeTo(null);
+        mod = (DefaultTableModel) tablaListaCompletaEstudiantes.getModel();
     }
     
     /**
@@ -19,10 +25,9 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
 
         botonCerrarListaCompletaEstudianteExtensionGui = new javax.swing.JButton();
         cajaListaEstudiantesExtensionGui = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tablaListaCompletaPracticantes = new javax.swing.JTable();
+        scroll = new javax.swing.JScrollPane();
+        tablaListaCompletaEstudiantes = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,50 +50,70 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
         });
         getContentPane().add(botonCerrarListaCompletaEstudianteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 80, 30));
 
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        scroll.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        scroll.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                scrollMouseClicked(evt);
+            }
+        });
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        tablaListaCompletaPracticantes.setModel(new javax.swing.table.DefaultTableModel(
+        tablaListaCompletaEstudiantes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Nombre", "Apellido", "Numero id", "Correo", "Programa", "Nombre Empresa", "Jefe Inmediato", "Ver"
+                "Nombre", "Apellido", "Numero Id", "Correo", "Programa", "Nombre Empresa", "Jefe Inmediato", "Avance"
             }
-        ));
-        jScrollPane2.setViewportView(tablaListaCompletaPracticantes);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1344, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 94, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanel3);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        scroll.setViewportView(tablaListaCompletaEstudiantes);
+        if (tablaListaCompletaEstudiantes.getColumnModel().getColumnCount() > 0) {
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(0).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(1).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(2).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(3).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(4).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(5).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(6).setResizable(false);
+            tablaListaCompletaEstudiantes.getColumnModel().getColumn(7).setResizable(false);
+        }
 
         javax.swing.GroupLayout cajaListaEstudiantesExtensionGuiLayout = new javax.swing.GroupLayout(cajaListaEstudiantesExtensionGui);
         cajaListaEstudiantesExtensionGui.setLayout(cajaListaEstudiantesExtensionGuiLayout);
         cajaListaEstudiantesExtensionGuiLayout.setHorizontalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
+            .addComponent(scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
         );
         cajaListaEstudiantesExtensionGuiLayout.setVerticalGroup(
             cajaListaEstudiantesExtensionGuiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+            .addComponent(scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
         );
 
         getContentPane().add(cajaListaEstudiantesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 890, 370));
+
+        jButton1.setBackground(new java.awt.Color(102, 0, 0));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("AGREGAR");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\fondo lista de estudiantes seguimineto al estudiante interfaz extension.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
@@ -100,6 +125,31 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
     private void botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked
         dispose();
     }//GEN-LAST:event_botonCerrarListaCompletaEstudianteExtensionGuiMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     Object[] fi = new Object[8];
+      fi[0]="";
+      fi[1]="";
+      fi[2]="";
+      fi[3]="";
+      fi[4]="";
+      fi[5]="";
+      fi[6]="";
+      fi[7]="";
+      
+      
+      mod.addRow(fi);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+      
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void scrollMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scrollMouseClicked
+        if (evt.getClickCount()== 1){
+             ControladorPerfilEstudianteAvance.inicio();
+        }
+    }//GEN-LAST:event_scrollMouseClicked
 
     /**
      * @param args the command line arguments
@@ -138,11 +188,10 @@ public class listaCompletaEstudiantes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCerrarListaCompletaEstudianteExtensionGui;
-    private javax.swing.JPanel cajaListaEstudiantesExtensionGui;
+    public static javax.swing.JPanel cajaListaEstudiantesExtensionGui;
+    public static javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTable tablaListaCompletaPracticantes;
+    public static javax.swing.JScrollPane scroll;
+    public static javax.swing.JTable tablaListaCompletaEstudiantes;
     // End of variables declaration//GEN-END:variables
 }
