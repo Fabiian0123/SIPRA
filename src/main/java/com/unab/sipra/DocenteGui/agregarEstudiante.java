@@ -4,10 +4,12 @@ import static com.unab.sipra.DocenteGui.interfazDocente.tablaInterfazDocente;
 import static com.unab.sipra.DocenteGui.perfilEstudiante.barraProgresoEditarPerfilEstudianteDocenteGui;
 import com.unab.sipra.ExtensionGui.interfazExtension;
 import com.unab.sipra.ExtensionGui.listaCompletaEstudiantes;
+import com.unab.sipra.controladores.ContJprogressBar;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import javax.swing.BoundedRangeModel;
 import javax.swing.JProgressBar;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,6 +18,8 @@ public class agregarEstudiante extends javax.swing.JFrame {
     public agregarEstudiante() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -131,7 +135,7 @@ public class agregarEstudiante extends javax.swing.JFrame {
     private void botonCerrarAgregarEstudianteDocenteGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
         this.dispose();
     }//GEN-LAST:event_botonCerrarAgregarEstudianteDocenteGuiMouseClicked
-
+    
     private void botonGuardarAgregarEstudianteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarAgregarEstudianteGuiActionPerformed
         Object[] mo = new Object[8];
         DefaultTableModel model = (DefaultTableModel) interfazDocente.tablaInterfazDocente.getModel();
@@ -142,7 +146,7 @@ public class agregarEstudiante extends javax.swing.JFrame {
         mo[4] = cajaProgramaAgregarEstudianteGui.getText();
         mo[5] = cajaNombreEmpresaAgregarEstudianteGui.getText();
         mo[6] = cajaNombreJefeAgregarEstudianteGui.getText();
-        mo[7] = "";
+        mo[7] = "           0%";
         model.addRow(mo);
         this.dispose();
         

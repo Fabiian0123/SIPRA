@@ -74,7 +74,7 @@ public class interfazDocente extends javax.swing.JFrame {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, true
+                false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -95,20 +95,13 @@ public class interfazDocente extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tablaInterfazDocente);
         if (tablaInterfazDocente.getColumnModel().getColumnCount() > 0) {
             tablaInterfazDocente.getColumnModel().getColumn(0).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(0).setHeaderValue("Nombre");
             tablaInterfazDocente.getColumnModel().getColumn(1).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(1).setHeaderValue("Apellidos");
             tablaInterfazDocente.getColumnModel().getColumn(2).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(2).setHeaderValue("Numero Id");
-            tablaInterfazDocente.getColumnModel().getColumn(3).setHeaderValue("Correo");
+            tablaInterfazDocente.getColumnModel().getColumn(3).setResizable(false);
             tablaInterfazDocente.getColumnModel().getColumn(4).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(4).setHeaderValue("Programa");
             tablaInterfazDocente.getColumnModel().getColumn(5).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(5).setHeaderValue("Nombre Empresa");
             tablaInterfazDocente.getColumnModel().getColumn(6).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(6).setHeaderValue("Jefe Inmediato");
             tablaInterfazDocente.getColumnModel().getColumn(7).setResizable(false);
-            tablaInterfazDocente.getColumnModel().getColumn(7).setHeaderValue("Avance");
         }
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
