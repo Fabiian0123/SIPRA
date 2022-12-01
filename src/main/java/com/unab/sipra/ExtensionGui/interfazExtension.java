@@ -1,7 +1,8 @@
 
 package com.unab.sipra.ExtensionGui;
-
+import com.unab.sipra.controladores.ControladorPerfilDocente;
 import com.unab.sipra.controladores.ControladorListaCompletaDocentesExtensionGui;
+import com.unab.sipra.controladores.ControladorPerfilEstudianteDocenteGui;
 import com.unab.sipra.controladores.ControladorVerListaPracticantesExtensionGui;
 import javax.swing.JOptionPane;
 
@@ -67,6 +68,11 @@ public class interfazExtension extends javax.swing.JFrame {
         botonBuscarSeguimientoEstudianteExtensionGui.setText("BUSCAR");
         botonBuscarSeguimientoEstudianteExtensionGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botonBuscarSeguimientoEstudianteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonBuscarSeguimientoEstudianteExtensionGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarSeguimientoEstudianteExtensionGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonBuscarSeguimientoEstudianteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 120, 40));
 
         botonListaDeEstudiantesSeguimientoEstudiantesExtensionGui.setBackground(new java.awt.Color(153, 0, 0));
@@ -166,7 +172,7 @@ public class interfazExtension extends javax.swing.JFrame {
     }//GEN-LAST:event_botonListaDeEstudiantesSeguimientoEstudiantesExtensionGuiActionPerformed
 
     private void botonBuscarSeguimientoDocenteEntensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarSeguimientoDocenteEntensionGuiActionPerformed
-        // TODO add your handling code here:
+       ControladorPerfilDocente.inicio();
     }//GEN-LAST:event_botonBuscarSeguimientoDocenteEntensionGuiActionPerformed
 
     private void botonListaDocentesSeguimientoDocenteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListaDocentesSeguimientoDocenteExtensionGuiActionPerformed
@@ -191,6 +197,10 @@ public class interfazExtension extends javax.swing.JFrame {
     private void botonMinimizarInterfazExtensionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMinimizarInterfazExtensionMouseClicked
     this.setState(interfazExtension.ICONIFIED);
     }//GEN-LAST:event_botonMinimizarInterfazExtensionMouseClicked
+
+    private void botonBuscarSeguimientoEstudianteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarSeguimientoEstudianteExtensionGuiActionPerformed
+        ControladorPerfilEstudianteDocenteGui.inicio();
+    }//GEN-LAST:event_botonBuscarSeguimientoEstudianteExtensionGuiActionPerformed
     
     /**
      * @param args the command line arguments
@@ -242,6 +252,12 @@ public class interfazExtension extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+
+    public static class tablaListaCompletaPracticantes {
+
+        public tablaListaCompletaPracticantes() {
+        }
+    }
 
     
 

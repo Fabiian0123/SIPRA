@@ -35,6 +35,7 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Edita El Perfil Del Estudiante");
+        setAlwaysOnTop(true);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -139,7 +140,14 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCancelarEditarInformacionEstudianteDocenteGuiActionPerformed
 
     private void botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed
-        // TODO add your handling code here:
+        perfilEstudiante.cajaNombresApellidosPerfilEstudianteDocenteGui.setText(cajaNombresEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaNombresApellidosPerfilEstudianteDocenteGui.setText(cajaApellidosEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setText(cajaNumieroIdEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaCorreoPerfilEstudianteDocenteGui.setText(cajaCorreoEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaProgramaPerfilEstudianteDocenteGui.setText(cajaProgramaEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaNombreEmpresaPerfilEstudianteDocenteGui.setText(cajaNombreEmpresaEditarPerfilEstudianteDocenteGui.getText());
+        perfilEstudiante.cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setText(cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui.getText());
+        this.dispose();
     }//GEN-LAST:event_botonGuardarEditarPerfilEstudianteDocenteGuiActionPerformed
 
     /**
@@ -180,13 +188,13 @@ public class editarInformacionEstudiante extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCancelarEditarInformacionEstudianteDocenteGui;
     private javax.swing.JButton botonGuardarEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaApellidosEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaCorreoEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombreEmpresaEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombresEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNumieroIdEditarPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaProgramaEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaApellidosEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaCorreoEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombreEmpresaEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombreJefeInmediatoEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombresEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNumieroIdEditarPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaProgramaEditarPerfilEstudianteDocenteGui;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 

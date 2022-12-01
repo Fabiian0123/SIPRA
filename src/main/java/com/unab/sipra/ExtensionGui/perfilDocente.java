@@ -15,6 +15,7 @@ public class perfilDocente extends javax.swing.JFrame {
      */
     public perfilDocente() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -33,10 +34,13 @@ public class perfilDocente extends javax.swing.JFrame {
         cajaProgramaPerfilDocenteExtensionGui = new javax.swing.JTextField();
         botonVerEvidenciasDocentePerfilDocenteExtensionGui = new javax.swing.JButton();
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui = new javax.swing.JButton();
+        botonCerrarPerfilDocenteExtensionGui = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil Docente");
+        setAlwaysOnTop(true);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -108,12 +112,29 @@ public class perfilDocente extends javax.swing.JFrame {
         botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 260, 50));
 
+        botonCerrarPerfilDocenteExtensionGui.setBackground(new java.awt.Color(153, 0, 0));
+        botonCerrarPerfilDocenteExtensionGui.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCerrarPerfilDocenteExtensionGui.setForeground(new java.awt.Color(255, 255, 255));
+        botonCerrarPerfilDocenteExtensionGui.setText("CERRAR");
+        botonCerrarPerfilDocenteExtensionGui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonCerrarPerfilDocenteExtensionGui.setFocusPainted(false);
+        botonCerrarPerfilDocenteExtensionGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCerrarPerfilDocenteExtensionGuiActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonCerrarPerfilDocenteExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 110, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\peril docente del rol extension.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonCerrarPerfilDocenteExtensionGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarPerfilDocenteExtensionGuiActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_botonCerrarPerfilDocenteExtensionGuiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,6 +172,7 @@ public class perfilDocente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCerrarPerfilDocenteExtensionGui;
     private javax.swing.JButton botonListaDeEstudiantesAcargoPerfilDocenteExtensionGui;
     private javax.swing.JButton botonVerEvidenciasDocentePerfilDocenteExtensionGui;
     private javax.swing.JPanel cajaFotoPerfilDocenteExtensionGui;

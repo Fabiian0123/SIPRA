@@ -1,13 +1,18 @@
 
 package com.unab.sipra.ExtensionGui;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 
 public class listaCompletaDocentes extends javax.swing.JFrame {
+    DefaultTableModel modelo;
 
     
     public listaCompletaDocentes() {
         initComponents();
         this.setLocationRelativeTo(this);
+        DefaultTableModel modelo = (DefaultTableModel) tablaListaCompletaDocentes.getModel();
     }
 
     /**
@@ -23,7 +28,9 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         cajaListadeDocentes = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaListaCompletaDocentes = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -51,18 +58,15 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaListaCompletaDocentes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nombres", "Apellidos", "Numero Id", "Programa"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tablaListaCompletaDocentes);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -100,6 +104,30 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
 
         getContentPane().add(cajaListaDocentesExtensionGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 870, 330));
 
+        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("GUARDAR");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(153, 0, 0));
+        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("AGREGAR");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\fabia\\OneDrive\\Escritorio\\NetBeansProjects\\SIPRA\\src\\main\\java\\com\\unab\\sipra\\recursos\\lista completa de docentes.png")); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 4, true));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
@@ -110,6 +138,23 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
     private void botonCancelarListDocentesEntensionGuiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarListDocentesEntensionGuiMouseClicked
         dispose();
     }//GEN-LAST:event_botonCancelarListDocentesEntensionGuiMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       JOptionPane.showMessageDialog(null, "SE GUARDO CORRECTAMENTE");
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Object datos[] = new Object[4];
+        String uno, dos, tres, cuatro;
+
+        datos[0] = "";
+        datos[1] = "";
+        datos[2] = "";
+        datos[3] = "";
+
+        modelo.addRow(datos);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +196,12 @@ public class listaCompletaDocentes extends javax.swing.JFrame {
     private javax.swing.JButton botonCancelarListDocentesEntensionGui;
     private javax.swing.JPanel cajaListaDocentesExtensionGui;
     private javax.swing.JLabel cajaListadeDocentes;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaListaCompletaDocentes;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,6 +17,9 @@ public class perfilEstudianteAvance extends javax.swing.JFrame {
      */
     public perfilEstudianteAvance() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this);
+        
         
     }
 
@@ -48,7 +51,7 @@ public class perfilEstudianteAvance extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil Del Estudiante");
-        setResizable(false);
+        setAlwaysOnTop(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajaNombreApellidoPerfilEstudianteExtensionGui.setEditable(false);

@@ -47,6 +47,7 @@ public class perfilEstudiante extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Perfil Del Estudiante");
+        setAlwaysOnTop(true);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,37 +55,53 @@ public class perfilEstudiante extends javax.swing.JFrame {
         cajaNombresApellidosPerfilEstudianteDocenteGui.setEditable(false);
         cajaNombresApellidosPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaNombresApellidosPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaNombresApellidosPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombresApellidosPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         cajaNombresApellidosPerfilEstudianteDocenteGui.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        cajaNombresApellidosPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombresApellidosPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(cajaNombresApellidosPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 350, -1));
 
         cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setEditable(false);
         cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNumeroIdentificacionPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(cajaNumeroIdentificacionPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 320, -1));
 
         cajaCorreoPerfilEstudianteDocenteGui.setEditable(false);
         cajaCorreoPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaCorreoPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaCorreoPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaCorreoPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(cajaCorreoPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 430, -1));
 
         cajaProgramaPerfilEstudianteDocenteGui.setEditable(false);
         cajaProgramaPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaProgramaPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaProgramaPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaProgramaPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        cajaProgramaPerfilEstudianteDocenteGui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaProgramaPerfilEstudianteDocenteGuiActionPerformed(evt);
+            }
+        });
         getContentPane().add(cajaProgramaPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 420, -1));
 
         cajaNombreEmpresaPerfilEstudianteDocenteGui.setEditable(false);
         cajaNombreEmpresaPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaNombreEmpresaPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaNombreEmpresaPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreEmpresaPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(cajaNombreEmpresaPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 370, -1));
 
         cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setEditable(false);
         cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setBackground(new java.awt.Color(255, 255, 255));
         cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setForeground(new java.awt.Color(0, 0, 0));
         cajaNombreJefeInmediatoPerfilEstudianteDocenteGui.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(cajaNombreJefeInmediatoPerfilEstudianteDocenteGui, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 330, -1));
 
@@ -179,6 +196,14 @@ public class perfilEstudiante extends javax.swing.JFrame {
         ControladorEditarInforEstudianteInterfazDocente.inicio();
     }//GEN-LAST:event_botonEditarPerfilEstudianteDocenteGuiActionPerformed
 
+    private void cajaProgramaPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaProgramaPerfilEstudianteDocenteGuiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaProgramaPerfilEstudianteDocenteGuiActionPerformed
+
+    private void cajaNombresApellidosPerfilEstudianteDocenteGuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombresApellidosPerfilEstudianteDocenteGuiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombresApellidosPerfilEstudianteDocenteGuiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -219,13 +244,13 @@ public class perfilEstudiante extends javax.swing.JFrame {
     private javax.swing.JButton botonCerrarPerfilEstudianteDocenteGui;
     private javax.swing.JButton botonEditarPerfilEstudianteDocenteGui;
     private javax.swing.JTextArea cajaActividadesEstdiantePerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaCorreoPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaCorreoPerfilEstudianteDocenteGui;
     private javax.swing.JPanel cajaFotoPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombreEmpresaPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombreJefeInmediatoPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNombresApellidosPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaNumeroIdentificacionPerfilEstudianteDocenteGui;
-    private javax.swing.JTextField cajaProgramaPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombreEmpresaPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombreJefeInmediatoPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNombresApellidosPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaNumeroIdentificacionPerfilEstudianteDocenteGui;
+    public static javax.swing.JTextField cajaProgramaPerfilEstudianteDocenteGui;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
